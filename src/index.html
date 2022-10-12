@@ -3,13 +3,21 @@
     @@include('html/head.html', { "title": "Trusted & secured" })
     <body>
         @@include('html/header.html', {})
-        <a class="side-buttons" id="side-button-left" href="">
+        <a
+            class="side-buttons show_popup"
+            id="side-button-left"
+            href=""
+            rel="popup1"
+        >
             Support
             <img class="flag" src="@img/Ukraine-flag.png" alt="" />
         </a>
-        <a class="side-buttons" id="side-button-right" href="">
-            <span>Our Socials</span>
-        </a>
+        <div class="block-social">
+            <a class="side-buttons" id="side-button-right" href="">
+                <span>Our Socials</span>
+            </a>
+            @@include('html/page-hero.html', {})
+        </div>
         <div class="banner-cookies">
             <img src="@img/Cookie.png" alt="" />
             <span
@@ -25,7 +33,7 @@
             </button>
         </div>
         <main>
-            @@include('html/page-hero.html', {})
+            @@include('html/social-hover.html', {})
             @@include('html/page-services.html', {})
             @@include('html/page-feedbacks.html', {})
             @@include('html/page-projects.html', {})
@@ -33,7 +41,8 @@
             @@include('html/page-technologies.html', {})
             @@include('html/page-contacts.html', {})
         </main>
-        @@include('html/footer.html', {})
+        @@include('html/Ukraine-popup.html', {}) @@include('html/footer.html',
+        {})
         <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/jquery.marquee/1.4.0/jquery.marquee.min.js"></script>
         <script type="text/javascript" src="js/slick.min.js"></script>
