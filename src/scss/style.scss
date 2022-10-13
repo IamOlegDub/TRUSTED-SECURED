@@ -1273,7 +1273,85 @@ footer {
     flex-direction: column;
     .footer-container {
         display: flex;
-        padding: 50px 0px;
-        justify-content: center;
+        padding: 50px 168px 0;
+        justify-content: space-between;
+        .footer__column {
+            flex-basis: 24%;
+            &__logo {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                margin-bottom: 14px;
+                span {
+                    margin-left: 8px;
+                    font-family: "Open Sans";
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 27px;
+                }
+            }
+            &__list {
+                &__socials {
+                    display: flex;
+                    align-items: center;
+                    &-logos {
+                        display: flex;
+                        align-items: stretch;
+                        img {
+                            margin-left: 25px;
+                        }
+                    }
+                }
+            }
+            h5 {
+                font-size: 18px;
+                line-height: 140%;
+                text-transform: uppercase;
+                margin-bottom: 24px;
+            }
+            ul {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 140%;
+                li {
+                    margin-bottom: 16px;
+                }
+            }
+            &__center {
+                display: flex;
+                justify-content: space-evenly;
+                flex-basis: 60%;
+                margin-top: 8px;
+                margin-left: 13px;
+            }
+            &__last {
+                flex-basis: 12%;
+                a {
+                    text-decoration: none;
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    padding: 10px 13px;
+                    border-radius: 4px;
+                    border: solid 4px $text-color;
+                    color: $text-color;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+    .footer-author-info {
+        margin-top: 15px;
+        padding: 0 168px;
+        display: flex;
+        width: auto;
+        font-size: 14px;
+        line-height: 140%;
+        &__item {
+            margin-right: 28px;
+        }
+        &__link {
+            text-decoration: underline;
+            color: $text-color;
+        }
     }
 }
