@@ -23,22 +23,25 @@
                 <div id="eurasia-map"></div>
             </div>
             <div class="block-contacts__form">
-                <form action="submit">
-                    <label for="name">Name*</label>
+                <form id="start-project-form" action="submit">
+                    <label id="label-name" for="name">Name*</label>
                     <input
                         type="text"
                         id="name"
                         name="name"
                         placeholder="Your name..."
                     />
-                    <label for="email">email*</label>
+                    <span id="require-name">This field is required!</span>
+                    <label id="label-email" for="email">email*</label>
                     <input
-                        type="text"
+                        type="email"
                         id="email"
                         name="email"
                         placeholder="Your email..."
                     />
-                    <label for="comment">Your comment</label>
+                    <span id="require-email">This field is required!</span>
+                    <span id="wrong-email">Wrong email address!</span>
+                    <label id="label-comment" for="comment">Your comment</label>
                     <input
                         type="text"
                         id="comment"
@@ -47,9 +50,11 @@
                     />
                     <div class="submit-container btn-filled">
                         <input
+                            class="show_popup__form"
                             id="start-project"
                             type="submit"
                             value="Start project"
+                            rel="popup2"
                         />
                     </div>
                 </form>

@@ -3,6 +3,7 @@ import * as flsFunctions from "./modules/functions.js";
 flsFunctions.isWebp();
 
 $(document).ready(function () {
+    // language select
     $(".language-select").click(function () {
         $(this).toggleClass("open");
         var open = $(this).attr("class");
@@ -14,6 +15,8 @@ $(document).ready(function () {
         $(".language-select .language-option").removeClass("active");
         $(this).toggleClass("active");
     });
+
+    // buttons click effect
     $(".btn-outlined").on("click", function (e) {
         e.preventDefault();
         $('<div class="cursor">')
@@ -40,11 +43,15 @@ $(document).ready(function () {
                 $(this).remove();
             });
     });
+
+    // running text
     $(".marquee").marquee({
         duration: 7000,
         startVisible: true,
         duplicated: true,
     });
+
+    // sliders
     $(".block-slider").slick({
         dots: true,
         infinite: true,
@@ -55,6 +62,7 @@ $(document).ready(function () {
         // centerMode: true,
     });
 
+    // service tabs
     $("#cookies-close-btn").click(function () {
         $(".banner-cookies").addClass("js-hidden");
     });
@@ -89,6 +97,42 @@ $(document).ready(function () {
         $("#block-services__desc-6").addClass("active");
     });
 
+    // email-validation
+    $("#start-project-form input[type=email]").on("blur", function () {
+        let email = $(this).val();
+
+        if (email.length > 0 && (email.match(/.+?\@.+/g) || []).length !== 1) {
+            $("#label-email").css({
+                color: "#B00020",
+            });
+            $("#email").css({
+                "border-bottom": "3px solid #B00020",
+            });
+            $("#wrong-email").show();
+        } else {
+            $("#label-email").css({
+                color: "#0D0D0D",
+            });
+            $("#email").css({
+                "border-bottom": "3px solid #0d0d0d",
+            });
+            $("#wrong-email").hide();
+        }
+
+        if (email.length === 0) {
+            $("#label-email").css({
+                color: "#B00020",
+            });
+            $("#email").css({
+                "border-bottom": "3px solid #B00020",
+            });
+            $("#require-email").show();
+        } else {
+            $("#require-email").hide();
+        }
+    });
+
+    // Ukraine pop-up
     $(".show_popup").click(function (e) {
         e.preventDefault();
         var popup_id = $("#" + $(this).attr("rel"));
@@ -101,6 +145,31 @@ $(document).ready(function () {
             visibility: "visible",
         });
     });
+    // start project pop-up
+
+    $(".show_popup__form").click(function (e) {
+        e.preventDefault();
+        let nameProject = $("#name").val();
+        let emailProject = $("#email").val();
+        console.log(nameProject, emailProject);
+        if (
+            (emailProject.match(/.+?\@.+/g) || []).length == 1 &&
+            nameProject.length > 0 &&
+            emailProject.length > 0
+        ) {
+            var popup_id = $("#" + $(this).attr("rel"));
+            $(popup_id).css({
+                opacity: "1",
+                visibility: "visible",
+            });
+            $(".overlay_popup").css({
+                opacity: "1",
+                visibility: "visible",
+            });
+        }
+    });
+
+    // pop-up inside
     $(".overlay_popup").click(function () {
         $(".overlay_popup, .popup").css({
             opacity: "0",
@@ -124,5 +193,29 @@ $(document).ready(function () {
             right: "-80px",
             visibility: "hidden",
         });
+    });
+
+    // name-field require
+    $("#start-project-form input[type=text]").on("blur", function () {
+        let name = $(this).val();
+        if (!name.length > 0) {
+            $("#label-name").css({
+                color: "#B00020",
+            });
+            $("#name")
+                .css({
+                    "border-bottom": "3px solid #B00020",
+                })
+                .append(`<span>This field is required!</span>`);
+            $("#require-name").show();
+        } else {
+            $("#label-name").css({
+                color: "#0D0D0D",
+            });
+            $("#name").css({
+                "border-bottom": "3px solid #0d0d0d",
+            });
+            $("#require-name").hide();
+        }
     });
 });
