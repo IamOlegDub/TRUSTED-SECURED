@@ -1276,7 +1276,7 @@ footer {
         padding: 50px 168px 0;
         justify-content: space-between;
         .footer__column {
-            flex-basis: 24%;
+            flex-basis: 22%;
             &__logo {
                 display: flex;
                 align-items: center;
@@ -1320,12 +1320,12 @@ footer {
             &__center {
                 display: flex;
                 justify-content: space-evenly;
-                flex-basis: 60%;
+                flex-basis: 55%;
                 margin-top: 8px;
                 margin-left: 13px;
             }
             &__last {
-                flex-basis: 12%;
+                flex-basis: 16%;
                 a {
                     text-decoration: none;
                     font-size: 18px;
