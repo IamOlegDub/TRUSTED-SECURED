@@ -16,14 +16,15 @@
             <a class="side-buttons" id="side-button-right" href="">
                 <span>Our Socials</span>
             </a>
-            @@include('html/page-hero.html', {})
         </div>
         <div class="banner-cookies">
-            <img src="@img/Cookie.png" alt="" />
-            <span
-                >We use cookies to improve your experience on our site. To find
-                out more. <a href=""> read our Privacy Policy</a></span
-            >
+            <div class="banner-cookies__desc">
+                <img src="@img/Cookie.png" alt="" />
+                <span
+                    >We use cookies to improve your experience on our site. To
+                    find out more. <a href=""> read our Privacy Policy</a></span
+                >
+            </div>
 
             <button
                 class="cookies-close-btn btn-outlined"
@@ -32,7 +33,9 @@
                 <span>don’t show again</span>
             </button>
         </div>
+
         <main>
+            @@include('html/page-hero.html', {})
             @@include('html/social-hover.html', {})
             @@include('html/page-services.html', {})
             @@include('html/page-feedbacks.html', {})
@@ -41,6 +44,7 @@
             @@include('html/page-technologies.html', {})
             @@include('html/page-contacts.html', {})
         </main>
+
         @@include('html/Ukraine-popup.html', {})
         @@include('html/start-project-popup.html', {})
         @@include('html/footer.html', {})

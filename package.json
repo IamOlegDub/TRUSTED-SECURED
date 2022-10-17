@@ -14,7 +14,8 @@
   "author": "OD",
   "license": "ISC",
   "dependencies": {
-    "gulp-cli": "^2.3.0"
+    "gulp-cli": "^2.3.0",
+    "sass-rem": "^3.0.0"
   },
   "devDependencies": {
     "browser-sync": "^2.27.10",

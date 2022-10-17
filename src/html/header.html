@@ -1,24 +1,32 @@
 <header class="header">
-    <div class="header__logo">
-        <img src="@img/LogoIcon.svg" alt="" />
-        <span>SoftPartners</span>
-    </div>
-    <div class="header__nav">
-        <div class="header__nav__left">
-            <ul>
-                <li>Services</li>
-                <li>Projects</li>
-                <li>About us</li>
-            </ul>
+    <div class="container">
+        <div class="header__logo">
+            <div class="header__logo__icon">
+                <img src="@img/LogoIcon.svg" alt="" />
+            </div>
+            <span>SoftPartners</span>
         </div>
-        <div class="header__nav__right">
-            <ul>
-                <li>Contacts</li>
-                <li>
-                    <div class="language-select">
-                        <div class="language-option active" data-lang="ua">
-                            <span>ua</span>
-                            <span>
+        <div class="header__burger">
+            <span></span>
+        </div>
+        <div class="header__nav">
+            <div class="header__burger__logo">
+                <div class="header__burger__logo__icon">
+                    <img src="@img/LogoIcon.svg" alt="" />
+                </div>
+                <span>SoftPartners</span>
+            </div>
+            <div class="header__burger__close">
+                <span></span>
+            </div>
+            <div class="header__nav__left">
+                <ul>
+                    <li>Services</li>
+                    <li>Projects</li>
+                    <li class="burger__open">
+                        <span class="burger__open__toggler"
+                            ><span>About us</span>
+                            <span class="burger__open__arrow">
                                 <img
                                     class="language-arrow__down"
                                     src="@img/keyboard_arrow_down.svg"
@@ -28,27 +36,71 @@
                                     class="language-arrow__up-hover"
                                     src="@img/keyboard_arrow_up_hover.svg"
                                     alt=""
-                                />
-                            </span>
+                                /> </span
+                        ></span>
+
+                        <ul class="burger__open__list">
+                            <li class="drop-list">Company</li>
+                            <li class="drop-list">team</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="header__nav__right">
+                <ul>
+                    <li>Contacts</li>
+                    <li>
+                        <div class="language-select">
+                            <div class="language-option active" data-lang="ua">
+                                <span>ua</span>
+                                <span>
+                                    <img
+                                        class="language-arrow__down"
+                                        src="@img/keyboard_arrow_down.svg"
+                                        alt=""
+                                    />
+                                    <img
+                                        class="language-arrow__up-hover"
+                                        src="@img/keyboard_arrow_up_hover.svg"
+                                        alt=""
+                                    />
+                                </span>
+                            </div>
+                            <div class="language-option" data-lang="en">
+                                <span>en</span>
+                                <span>
+                                    <img
+                                        class="language-arrow__down"
+                                        src="@img/keyboard_arrow_down.svg"
+                                        alt=""
+                                    />
+                                    <img
+                                        class="language-arrow__up-hover"
+                                        src="@img/keyboard_arrow_up_hover.svg"
+                                        alt=""
+                                    />
+                                </span>
+                            </div>
                         </div>
-                        <div class="language-option" data-lang="en">
-                            <span>en</span>
-                            <span>
-                                <img
-                                    class="language-arrow__down"
-                                    src="@img/keyboard_arrow_down.svg"
-                                    alt=""
-                                />
-                                <img
-                                    class="language-arrow__up-hover"
-                                    src="@img/keyboard_arrow_up_hover.svg"
-                                    alt=""
-                                />
-                            </span>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+                    </li>
+                    <li>
+                        <a
+                            class="show_popup support-button__burger"
+                            id="burger-button-left"
+                            href=""
+                            rel="popup1"
+                        >
+                            Support
+                            <img
+                                class="burger__flag"
+                                src="@img/Ukraine-flag.png"
+                                alt=""
+                            />
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
+        <div class="burger-menu_overlay"></div>
     </div>
 </header>
