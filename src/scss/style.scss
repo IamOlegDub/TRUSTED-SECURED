@@ -57,7 +57,7 @@ ol {
     max-width: 1440px;
     margin: 0 auto;
     .wrap {
-        width: 1200px;
+        max-width: 1200px;
         margin: 0 auto;
         padding: 0 10px;
     }
@@ -184,30 +184,33 @@ ol {
     }
 }
 .banner-cookies {
+    &__container {
+        padding: 0 10px;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        right: 0;
+        top: 575px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.125rem;
+        text-transform: uppercase;
+        border: 4px transparent;
+        border-style: solid none solid none;
+        background-image: linear-gradient(
+                rgba(255, 255, 255, 0),
+                rgba(255, 255, 255, 0)
+            ),
+            -webkit-linear-gradient(45deg, #f72f16, #9422d1);
+        box-shadow: 2px 1000px 14px #fff inset;
+
+        font-weight: 700;
+    }
     &__desc {
         display: flex;
         align-items: center;
     }
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    right: 0;
-    top: 575px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.125rem;
-    text-transform: uppercase;
-    border: 4px transparent;
-    border-style: solid none solid none;
-    background-image: linear-gradient(
-            rgba(255, 255, 255, 0),
-            rgba(255, 255, 255, 0)
-        ),
-        -webkit-linear-gradient(45deg, #f72f16, #9422d1);
-    box-shadow: 2px 1000px 14px #fff inset;
-
-    font-weight: 700;
 
     .cookies-close-btn {
         @include outlined-button;
@@ -1182,9 +1185,10 @@ p {
 
 // footer
 footer {
-    // max-width: 1440px;
     margin: 0 auto;
     width: auto;
+    // max-width: 1440px;
+    // width: 100%;
     height: 434px;
     background-color: $black;
     margin-top: 160px;
@@ -1321,15 +1325,28 @@ footer {
 
 .absolute {
     width: calc(100vw - (100vw - 1177px) / 2);
+    @media (max-width: 1200px) {
+        width: 100%;
+    }
 }
 .page-technologies .block-slider__center-mode .slick-arrow.slick-prev {
     right: calc((100vw - 1200px) / 2 + 186px);
+    @media (max-width: 1200px) {
+        right: 195px;
+    }
 }
+
 .page-technologies .block-slider__center-mode .slick-dots {
     right: calc((100vw - 1200px) / 2 + 115px);
+    @media (max-width: 1200px) {
+        right: 127px;
+    }
 }
 .page-technologies .block-slider__center-mode .slick-arrow.slick-next {
     right: calc((100vw - 1200px) / 2 - 9px);
+    @media (max-width: 1200px) {
+        right: 2px;
+    }
 }
 @import "style-tab";
 @import "style-mobile";

@@ -53,6 +53,7 @@ $ph: rgba(13, 13, 13, 0.4);
         border: solid 4px $text-color;
         color: $text-color;
         background-color: transparent;
+        cursor: pointer;
     }
 }
 @mixin gradient {
@@ -62,6 +63,7 @@ $ph: rgba(13, 13, 13, 0.4);
         -webkit-text-fill-color: transparent;
     }
 }
+
 @mixin outlined-button {
     text-decoration: none;
     font-size: 18px;
@@ -78,6 +80,8 @@ $ph: rgba(13, 13, 13, 0.4);
     background-clip: content-box, border-box;
     box-shadow: 2px 1000px 4px 4px #fff inset;
     @include gradient;
+    cursor: pointer;
+
     &:hover {
         box-shadow: 2px 1000px 1px #f8f2fc inset;
     }
@@ -91,6 +95,8 @@ $ph: rgba(13, 13, 13, 0.4);
     padding: 14px 16px;
     border-radius: 4px;
     position: relative;
+    cursor: pointer;
+
     &:hover {
         background: linear-gradient(
                 0deg,

@@ -31,12 +31,15 @@
     // }
 
     .banner-cookies {
-        top: 596px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        padding: 16px 31px;
-        align-items: flex-end;
+        &__container {
+            top: 596px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 16px 31px;
+            align-items: flex-end;
+        }
+
         &__desc {
             gap: 15px;
             align-items: flex-start;
@@ -759,7 +762,7 @@
         }
         .block-slider__center-mode.block-tech__slider.tablet-visible {
             display: block;
-            width: calc(600px - 32px);
+            width: 100%;
             .slick-dots {
                 top: 23px;
                 right: 159px;
