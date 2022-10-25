@@ -3,6 +3,13 @@ import * as flsFunctions from "./modules/functions.js";
 flsFunctions.isWebp();
 
 $(document).ready(function () {
+    // $(".block-tech__slider__cards__card").hover(function () {
+    //     $(".block-tech__slider__cards__card__img").fadeOut();
+    // });
+    // setInterval(changeGradient, )
+
+    // $('.block-hero__offer h1 span')
+
     // language select
     $(".language-select").click(function () {
         $(this).toggleClass("open");
@@ -14,6 +21,69 @@ $(document).ready(function () {
         $(".language-select").data("location", dataLangSelect);
         $(".language-select .language-option").removeClass("active");
         $(this).toggleClass("active");
+    });
+
+    $("#explore-company, #services").click(function (e) {
+        e.preventDefault();
+        $("html, body").animate(
+            {
+                scrollTop: $("#page-services").offset().top - 72,
+            },
+            1000
+        );
+    });
+    $("#projects").click(function (e) {
+        e.preventDefault();
+        $("html, body").animate(
+            {
+                scrollTop: $(".page-projects").offset().top - 72,
+            },
+            1000
+        );
+    });
+    $("#contacts").click(function (e) {
+        e.preventDefault();
+        $("html, body").animate(
+            {
+                scrollTop: $(".page-contacts").offset().top - 72,
+            },
+            1000
+        );
+    });
+    $("#start-project").click(function () {
+        $("html, body").animate(
+            {
+                scrollTop: $(".page-contacts").offset().top - 72,
+            },
+            1000
+        );
+    });
+    $("#get-in-touch").click(function (e) {
+        e.preventDefault();
+        $("html, body").animate(
+            {
+                scrollTop: $(".page-contacts").offset().top - 72,
+            },
+            1000
+        );
+    });
+    $("#header-logo").click(function (e) {
+        e.preventDefault();
+        $("html, body").animate(
+            {
+                scrollTop: $(".page-hero").offset().top - 72,
+            },
+            1000
+        );
+    });
+    $("#header-logo").click(function (e) {
+        e.preventDefault();
+        $("html, body").animate(
+            {
+                scrollTop: $(".page-hero").offset().top - 72,
+            },
+            1000
+        );
     });
 
     // about us list
@@ -53,6 +123,12 @@ $(document).ready(function () {
     });
 
     // sliders
+
+    // $(window).on("load, resize", function windowSize() {
+    //     if ($(window).width() < "1440") {
+    //         $(".absolute .block-slider__center-mode").addClass("small-slider");
+    //     }
+    // });
     $(".block-slider").slick({
         dots: true,
         infinite: false,
@@ -69,7 +145,15 @@ $(document).ready(function () {
         infinite: false,
         // centerMode: true,
         variableWidth: true,
+        slidesToScroll: 3,
     });
+    // $(".absolute .block-slider__center-mode.small-slider").slick({
+    //     dots: true,
+    //     infinite: false,
+    //     // centerMode: true,
+    //     variableWidth: true,
+    //     slidesToScroll: 3,
+    // });
 
     // slide-open__tablet
     $(".page-technologies .block-tech__slider__cards__card").click(function (
@@ -291,4 +375,70 @@ $(document).ready(function () {
         );
         $("body").toggleClass("lock");
     });
+
+    // add classes to sliders for animation
+    // $(".page-services ._ninth._anim-items").hover(
+    //     function () {
+    //         $(".block-services").addClass("_active _anim-items");
+    //     },
+    //     function () {
+    //         $(".block-services").removeClass("_active _anim-items");
+    //     }
+    // );
+    // $("._second._anim-items._eurasia._active").change(function () {
+    //     if ($("._second._anim-items._eurasia._active")) {
+    //         console.log("yes");
+    //         setTimeout(() => {
+    //             $(
+    //                 ".block-contacts__maps__location__img._third._anim-items"
+    //             ).addClass("_active");
+    //         }, 1500);
+    //     } else {
+    //         console.log("no");
+    //     }
+    // });
 });
+
+const animItems = document.querySelectorAll("._anim-items");
+
+if (animItems.length > 0) {
+    window.addEventListener("scroll", animOnScroll);
+    function animOnScroll() {
+        for (let index = 0; index < animItems.length; index++) {
+            const animItem = animItems[index];
+            const animItemHeight = animItem.offsetHeight;
+            const animItemOffset = offset(animItem).top;
+            const animStart = 4;
+
+            let animItemPoint = window.innerHeight - animItemHeight / animStart;
+            if (animItemHeight > window.innerHeight) {
+                animItemPoint =
+                    window.innerHeight - window.innerHeight / animStart;
+            }
+
+            if (
+                pageYOffset - window.innerHeight * 0.1 >
+                    animItemOffset - animItemPoint &&
+                pageXOffset < animItemOffset + animItemHeight
+            ) {
+                animItem.classList.add("_active");
+                // $(".slick-dots, .slick-arrow").addClass("_active");
+            } else {
+                animItem.classList.remove("_active");
+                // $(".slick-dots, .slick-arrow").addClass("_active");
+            }
+        }
+    }
+    function offset(el) {
+        const rect = el.getBoundingClientRect();
+        const scrollLeft =
+            window.pageXOffset || document.documentElement.scrollLeft;
+        const scrollTop =
+            window.pageYOffset || document.documentElement.scrollTop;
+        return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
+    }
+
+    setTimeout(() => {
+        animOnScroll();
+    }, 300);
+}

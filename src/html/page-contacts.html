@@ -1,6 +1,6 @@
 <div class="page page-contacts">
     <div class="wrap">
-        <div class="block-contacts-title">
+        <div class="block-contacts-title _first _anim-items">
             <h2>Let’s get <br /><span>in touch!</span></h2>
             <h4>
                 Leave your contact info below, and we will reply within 24
@@ -8,7 +8,7 @@
             </h4>
         </div>
         <div class="block-contacts">
-            <div class="block-contacts__address">
+            <div class="block-contacts__address _fourth _anim-items">
                 <h3>Lviv, Ukraine</h3>
                 <p>15 Smal-Stockogo</p>
                 <p>
@@ -18,14 +18,27 @@
                 </p>
                 <p><a href="tel:+380960346906">+380960346906</a></p>
             </div>
-            <div class="block-contacts__maps">
-                <div id="america-map"></div>
-                <div id="eurasia-map">
-                    <div id="location"></div>
+            <div class="block-contacts__maps _second _anim-items">
+                <div class="block-contacts__maps__america">
+                    <img src="@img/AmericaMask.svg" class="_america" alt="" />
+                </div>
+                <div class="block-contacts__maps__eurasia">
+                    <img src="@img/EurasiaMask.svg" alt="" class="_eurasia" />
+                    <div class="block-contacts__maps__location">
+                        <img
+                            src="@img/location-icon-tablet.svg"
+                            alt=""
+                            class="location__img _third _anim-items"
+                        />
+                    </div>
                 </div>
             </div>
             <div class="block-contacts__form">
-                <form id="start-project-form" action="submit">
+                <form
+                    id="start-project-form"
+                    action="submit"
+                    class="form _fourth _anim-items"
+                >
                     <label id="label-name" for="name">Name*</label>
                     <input
                         type="text"
@@ -50,7 +63,7 @@
                         name="comment"
                         placeholder="Share your vision of the project..."
                     />
-                    <div class="submit-container btn-filled">
+                    <div class="submit-container btn-filled _fifth _anim-items">
                         <input
                             class="show_popup__form"
                             id="start-project"

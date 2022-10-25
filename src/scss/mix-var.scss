@@ -64,6 +64,72 @@ $ph: rgba(13, 13, 13, 0.4);
     }
 }
 
+@mixin change-gradient {
+    span {
+        background: linear-gradient(90deg, #f72f16, #9422d1, #f72f16);
+        background-size: 200%;
+
+        -webkit-animation: ch-gr 2.5s ease-out 0.8s infinite;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-animation: ch-gr 2.5s ease-out 0.8s infinite;
+        animation: ch-gr 2.5s ease-out 0.8s infinite;
+        // animation-timing-function: ease-out;
+        // animation-delay: 1ms;
+        // animation-duration: 1000ms;
+        // animation-name: ch-gr;
+        // animation-iteration-count: infinite;
+        // animation: 1s ease-out 0.8s infinite alternate ch-gr;
+        // transition: all 1000ms ease-out 1ms;
+    }
+
+    @-webkit-keyframes ch-gr {
+        0% {
+            background-position: 0%;
+        }
+        50% {
+            background-position: 100%;
+        }
+        100% {
+            background-position: 0%;
+        }
+    }
+    @-moz-keyframes ch-gr {
+        0% {
+            background-position: 0%;
+        }
+        50% {
+            background-position: 100%;
+        }
+        100% {
+            background-position: 0%;
+        }
+    }
+    @keyframes ch-gr {
+        0% {
+            background-position: 0%;
+        }
+        50% {
+            background-position: 100%;
+        }
+        100% {
+            background-position: 0%;
+        }
+
+        //     from {
+        //         background: linear-gradient(90deg, #f72f16 0%, #9422d1 100%);
+        //         -webkit-background-clip: text;
+        //         -webkit-text-fill-color: transparent;
+        //     }
+
+        //     to {
+        //         background: linear-gradient(270deg, #f72f16 0%, #9422d1 100%);
+        //         -webkit-background-clip: text;
+        //         -webkit-text-fill-color: transparent;
+        //     }
+    }
+}
+
 @mixin outlined-button {
     text-decoration: none;
     font-size: 18px;
@@ -187,32 +253,29 @@ $ph: rgba(13, 13, 13, 0.4);
             top: 22px;
             right: 127px;
             display: flex;
-
+            top: 23px;
             li {
+                display: none;
+            }
+            .slick-active {
+                color: $black;
+                display: block;
                 button {
                     z-index: 10;
                     font-size: 18px;
                     line-height: 140%;
                     text-transform: uppercase;
-                    color: rgba(13, 13, 13, 0.4);
+                    color: $black;
+
                     border: none;
                     background-color: transparent;
                     padding: 0;
                 }
-                @media (min-width: 601px) {
-                    &:first-child {
-                        &::after {
-                            content: "/";
-                            font-size: 18px;
-                            line-height: 140%;
-                            color: rgba(13, 13, 13, 0.4);
-                        }
-                    }
-                }
-                &.slick-active {
-                    button {
-                        color: $black;
-                    }
+                &::after {
+                    content: "/2";
+                    font-size: 18px;
+                    line-height: 140%;
+                    color: rgba(13, 13, 13, 0.4);
                 }
             }
         }
@@ -284,32 +347,32 @@ $ph: rgba(13, 13, 13, 0.4);
             top: 22px;
             right: 127px;
             display: flex;
-
+            top: 23px;
             li {
+                display: none;
+            }
+            .slick-active {
+                color: $black;
+                display: block;
                 button {
                     z-index: 10;
                     font-size: 18px;
                     line-height: 140%;
                     text-transform: uppercase;
-                    color: rgba(13, 13, 13, 0.4);
+                    color: $black;
+
                     border: none;
                     background-color: transparent;
                     padding: 0;
                 }
-                @media (min-width: 601px) {
-                    &:first-child {
-                        &::after {
-                            content: "/";
-                            font-size: 18px;
-                            line-height: 140%;
-                            color: rgba(13, 13, 13, 0.4);
-                        }
+                &::after {
+                    @media (max-width: 1439px) {
+                        content: "/3";
                     }
-                }
-                &.slick-active {
-                    button {
-                        color: $black;
-                    }
+                    content: "/2";
+                    font-size: 18px;
+                    line-height: 140%;
+                    color: rgba(13, 13, 13, 0.4);
                 }
             }
         }
@@ -341,5 +404,51 @@ $ph: rgba(13, 13, 13, 0.4);
     100% {
         opacity: 0.6;
         -webkit-transform: scale(0.3, 0.3);
+    }
+}
+
+@mixin tech-cards($url, $gradient, $btn-marg, $size) {
+    transition: all 0.8s ease;
+
+    &:hover {
+        .block-tech__slider__cards__card__img {
+            &::after {
+                opacity: 1;
+                // transform: translateY(100%);
+                content: "";
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                width: 369px;
+                height: 494px;
+                border-radius: 5px;
+                background: $gradient, url($url);
+                background-position: center !important;
+                background-size: $size !important;
+                background-repeat: no-repeat !important;
+            }
+            @media (max-width: 600px) {
+                &::after {
+                    opacity: 1;
+                    // transform: translateY(100%);
+                    content: "";
+                    position: absolute;
+                    top: 5px;
+                    left: 5px;
+                    width: 318px;
+                    height: 494px;
+                    border-radius: 5px;
+                    background: $gradient, url($url);
+                    background-position: center !important;
+                    background-size: $size !important;
+                    background-repeat: no-repeat !important;
+                }
+            }
+        }
+        .block-tech__slider__cards__card__desc {
+            button {
+                margin-top: $btn-marg;
+            }
+        }
     }
 }

@@ -1,8 +1,8 @@
-<div class="page page-services">
+<div id="page-services" class="page page-services">
     <div class="wrap">
         <div class="block-desc">
-            <h2>full-cycle <span>services</span></h2>
-            <p>
+            <h2 class="_first _anim-items">full-cycle <span>services</span></h2>
+            <p class="_second _anim-items">
                 It has never been easier or quicker to launch a new product. We
                 assist from initial consultation to product deployment and
                 ongoing support.
@@ -11,8 +11,14 @@
         <div class="block-services">
             <div class="block-services__list">
                 <ul>
-                    <li id="block-services__list-1">
-                        <h3 class="js-pressed"><span>Web Development</span></h3>
+                    <li
+                        class="block-services__list-1"
+                        id="block-services__list-1"
+                    >
+                        <h3 class="js-pressed _third _anim-items">
+                            <span>Web Development</span>
+                        </h3>
+                        <!-- Блоки для планшета і смартфона -->
                         <div
                             class="tablet-visible block-services__desc__service active"
                             id="block-services__desc__tablet-1"
@@ -34,12 +40,36 @@
                                 class="block-services__slider-wrapper tablet-visible active"
                                 id="block-services__auto-slider__1"
                             >
-                                @@include('./auto-slider.html', {})
+                                <div class="auto-slider">
+                                    <div class="auto-slider__element">
+                                        React
+                                    </div>
+                                    <div class="auto-slider__element">
+                                        next.js
+                                    </div>
+                                    <div class="auto-slider__element">
+                                        Gatsby
+                                    </div>
+                                    <div class="auto-slider__element">
+                                        Redux
+                                    </div>
+                                    <div class="auto-slider__element">
+                                        GraphQL
+                                    </div>
+                                    <div class="auto-slider__element">
+                                        Typescript
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </li>
-                    <li id="block-services__list-2">
-                        <h3><span>UI / UX Design</span></h3>
+                    <li
+                        class="block-services__list-2"
+                        id="block-services__list-2"
+                    >
+                        <h3 class="_fourth _anim-items">
+                            <span>UI / UX Design</span>
+                        </h3>
                         <div
                             class="block-services__desc__service tablet-visible"
                             id="block-services__desc__tablet-2"
@@ -50,11 +80,12 @@
                             <div class="block-services__text">
                                 <h4>ui / ux design</h4>
                                 <p>
-                                    A company's digital presence is critical to
-                                    its success. Increase the amount of users<br />
-                                    by using smart web solutions. The more
-                                    digital exposure your company gets, the more
-                                    sales it will make.
+                                    App design is essential for the user's
+                                    attraction to an app. Soft Partners places a
+                                    high value on designing a design that helps
+                                    you stand out. A smart design assists
+                                    businesses in converting visitors into
+                                    regular clients.
                                 </p>
                             </div>
                         </div>
@@ -62,11 +93,25 @@
                             class="block-services__slider-wrapper tablet-visible"
                             id="block-services__auto-slider__2"
                         >
-                            @@include('./auto-slider.html', {})
+                            <div class="auto-slider">
+                                <div class="auto-slider__element">Figma</div>
+                                <div class="auto-slider__element">Sketch</div>
+                                <div class="auto-slider__element">
+                                    After Effect
+                                </div>
+                                <div class="auto-slider__element">
+                                    Photoshop
+                                </div>
+                                <div class="auto-slider__element">
+                                    Illustrator
+                                </div>
+                            </div>
                         </div>
                     </li>
                     <li id="block-services__list-3">
-                        <h3><span>IT Consultancy</span></h3>
+                        <h3 class="_fifth _anim-items">
+                            <span>IT Consultancy</span>
+                        </h3>
                         <div
                             class="block-services__desc__service tablet-visible"
                             id="block-services__desc__tablet-3"
@@ -77,11 +122,13 @@
                             <div class="block-services__text">
                                 <h4>IT Consultancy</h4>
                                 <p>
-                                    A company's digital presence is critical to
-                                    its success. Increase the amount of users<br />
-                                    by using smart web solutions. The more
-                                    digital exposure your company gets, the more
-                                    sales it will make.
+                                    IT consulting services have become an
+                                    important component of a business culture.
+                                    We provide a niche expertise, which allows
+                                    business to solve business challenges,
+                                    outline and accomplish important tasks while
+                                    saving time and increasing company
+                                    sustainability.
                                 </p>
                             </div>
                         </div>
@@ -89,11 +136,29 @@
                             class="block-services__slider-wrapper tablet-visible"
                             id="block-services__auto-slider__3"
                         >
-                            @@include('./auto-slider.html', {})
+                            <div class="auto-slider">
+                                <div class="auto-slider__element">
+                                    expertise
+                                </div>
+                                <div class="auto-slider__element">
+                                    Cost saving
+                                </div>
+                                <div class="auto-slider__element">
+                                    Measurable
+                                </div>
+                                <div class="auto-slider__element">
+                                    Available
+                                </div>
+                                <div class="auto-slider__element">
+                                    time saving
+                                </div>
+                            </div>
                         </div>
                     </li>
                     <li id="block-services__list-4">
-                        <h3><span>Ideation & Evaluation</span></h3>
+                        <h3 class="_sixth _anim-items">
+                            <span>Ideation & Evaluation</span>
+                        </h3>
                         <div
                             class="block-services__desc__service tablet-visible"
                             id="block-services__desc__tablet-4"
@@ -107,11 +172,11 @@
                             <div class="block-services__text">
                                 <h4>ideation & evaluation</h4>
                                 <p>
-                                    A company's digital presence is critical to
-                                    its success. Increase the amount of users<br />
-                                    by using smart web solutions. The more
-                                    digital exposure your company gets, the more
-                                    sales it will make.
+                                    Great products come from great ideas. We
+                                    provide an ideation service to help you in
+                                    developing and testing innovative concepts
+                                    that may be transformed into unique business
+                                    solutions.
                                 </p>
                             </div>
                         </div>
@@ -119,11 +184,25 @@
                             class="block-services__slider-wrapper tablet-visible"
                             id="block-services__auto-slider__4"
                         >
-                            @@include('./auto-slider.html', {})
+                            <div class="auto-slider">
+                                <div class="auto-slider__element">
+                                    innovation
+                                </div>
+                                <div class="auto-slider__element">analysys</div>
+                                <div class="auto-slider__element">solution</div>
+                                <div class="auto-slider__element">
+                                    definition
+                                </div>
+                                <div class="auto-slider__element">
+                                    validation
+                                </div>
+                            </div>
                         </div>
                     </li>
                     <li id="block-services__list-5">
-                        <h3><span>Automated Software</span></h3>
+                        <h3 class="_seventh _anim-items">
+                            <span>Automated Software</span>
+                        </h3>
                         <div
                             class="block-services__desc__service tablet-visible"
                             id="block-services__desc__tablet-5"
@@ -134,11 +213,11 @@
                             <div class="block-services__text">
                                 <h4>Automated Software</h4>
                                 <p>
-                                    A company's digital presence is critical to
-                                    its success. Increase the amount of users<br />
-                                    by using smart web solutions. The more
-                                    digital exposure your company gets, the more
-                                    sales it will make.
+                                    Put your software on autopilot. You may
+                                    boost the efficiency of your service
+                                    partners and your organization while
+                                    lowering operating costs using automated
+                                    software.
                                 </p>
                             </div>
                         </div>
@@ -146,11 +225,27 @@
                             class="block-services__slider-wrapper tablet-visible"
                             id="block-services__auto-slider__5"
                         >
-                            @@include('./auto-slider.html', {})
+                            <div class="auto-slider">
+                                <div class="auto-slider__element">
+                                    productive
+                                </div>
+                                <div class="auto-slider__element">
+                                    autonomous
+                                </div>
+                                <div class="auto-slider__element">Reliable</div>
+                                <div class="auto-slider__element">
+                                    cost saving
+                                </div>
+                                <div class="auto-slider__element">focused</div>
+                            </div>
                         </div>
                     </li>
                     <li id="block-services__list-6">
-                        <h3><span>Dedicated Teams</span></h3>
+                        <h3
+                            class="_block-services__animator _eighth _anim-items"
+                        >
+                            <span>Dedicated Teams</span>
+                        </h3>
                         <div
                             class="block-services__desc__service tablet-visible"
                             id="block-services__desc__tablet-6"
@@ -161,11 +256,11 @@
                             <div class="block-services__text">
                                 <h4>Dedicated Teams</h4>
                                 <p>
-                                    A company's digital presence is critical to
-                                    its success. Increase the amount of users<br />
-                                    by using smart web solutions. The more
-                                    digital exposure your company gets, the more
-                                    sales it will make.
+                                    Hiring a dedicated workforce is less
+                                    expensive than assembling your own team.
+                                    Teams can be altered at any time during the
+                                    project based on the current needs and
+                                    requirements. Simple as that.
                                 </p>
                             </div>
                         </div>
@@ -173,110 +268,231 @@
                             class="block-services__slider-wrapper tablet-visible"
                             id="block-services__auto-slider__6"
                         >
-                            @@include('./auto-slider.html', {})
+                            <div class="auto-slider">
+                                <div class="auto-slider__element">Remote</div>
+                                <div class="auto-slider__element">
+                                    efficient
+                                </div>
+                                <div class="auto-slider__element">focused</div>
+                                <div class="auto-slider__element">
+                                    cost saving
+                                </div>
+                                <div class="auto-slider__element">flexible</div>
+                                <div class="auto-slider__element">
+                                    professionally
+                                </div>
+                            </div>
                         </div>
                     </li>
                 </ul>
             </div>
-            <div class="block-services__desc">
+
+            <!-- блоки для декстопа -->
+            <div class="block-services__desc _third _anim-items">
                 <div
                     class="block-services__desc__service active"
                     id="block-services__desc-1"
                 >
-                    <img src="@img/web-development.jpg" alt="" />
-                    <div class="block-services__text">
-                        <h4>Web Development</h4>
-                        <p>
-                            A company's digital presence is critical to its
-                            success. Increase the amount of users<br />
-                            by using smart web solutions. The more digital
-                            exposure your company gets, the more sales it will
-                            make.
-                        </p>
+                    <div class="block-services__desc__service__img">
+                        <img src="@img/web-development.jpg" alt="" />
                     </div>
-                </div>
-                <div
-                    class="block-services__desc__service"
-                    id="block-services__desc-2"
-                >
-                    <img src="@img/ui-ux-design.png" alt="" />
-                    <div class="block-services__text">
-                        <h4>ui / ux design</h4>
-                        <p>
-                            A company's digital presence is critical to its
-                            success. Increase the amount of users<br />
-                            by using smart web solutions. The more digital
-                            exposure your company gets, the more sales it will
-                            make.
-                        </p>
+
+                        <div class="block-services__text">
+                            <h4>Web Development</h4>
+                            <p>
+                                A company's digital presence is critical to its
+                                success. Increase the amount of users<br />
+                                by using smart web solutions. The more digital
+                                exposure your company gets, the more sales it
+                                will make.
+                            </p>
+                        </div>
+                        <div class="block-services__slider-wrapper">
+                            <div class="auto-slider">
+                                <div class="auto-slider__element">React</div>
+                                <div class="auto-slider__element">next.js</div>
+                                <div class="auto-slider__element">Gatsby</div>
+                                <div class="auto-slider__element">Redux</div>
+                                <div class="auto-slider__element">GraphQL</div>
+                                <div class="auto-slider__element">
+                                    Typescript
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div
-                    class="block-services__desc__service"
-                    id="block-services__desc-3"
-                >
-                    <img src="@img/it-consultancy.png" alt="" />
-                    <div class="block-services__text">
-                        <h4>IT Consultancy</h4>
-                        <p>
-                            A company's digital presence is critical to its
-                            success. Increase the amount of users<br />
-                            by using smart web solutions. The more digital
-                            exposure your company gets, the more sales it will
-                            make.
-                        </p>
+                    <div
+                        class="block-services__desc__service"
+                        id="block-services__desc-2"
+                    >
+                    <div class="block-services__desc__service__img">
+                        <img src="@img/ui-ux-design.png" alt="" />
                     </div>
-                </div>
-                <div
-                    class="block-services__desc__service"
-                    id="block-services__desc-4"
-                >
-                    <img src="@img/ideation-evaluation.png" alt="" />
-                    <div class="block-services__text">
-                        <h4>ideation & evaluation</h4>
-                        <p>
-                            A company's digital presence is critical to its
-                            success. Increase the amount of users<br />
-                            by using smart web solutions. The more digital
-                            exposure your company gets, the more sales it will
-                            make.
-                        </p>
+                        <div class="block-services__text">
+                            <h4>ui / ux design</h4>
+                            <p>
+                                App design is essential for the user's
+                                attraction to an app. Soft Partners places a
+                                high value on designing a design that helps you
+                                stand out. A smart design assists businesses in
+                                converting visitors into regular clients.
+                            </p>
+                        </div>
+                        <div class="block-services__slider-wrapper">
+                            <div class="auto-slider">
+                                <div class="auto-slider__element">Figma</div>
+                                <div class="auto-slider__element">Sketch</div>
+                                <div class="auto-slider__element">
+                                    After Effect
+                                </div>
+                                <div class="auto-slider__element">
+                                    Photoshop
+                                </div>
+                                <div class="auto-slider__element">
+                                    Illustrator
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div
-                    class="block-services__desc__service"
-                    id="block-services__desc-5"
-                >
-                    <img src="@img/automated-software.png" alt="" />
-                    <div class="block-services__text">
-                        <h4>Automated Software</h4>
-                        <p>
-                            A company's digital presence is critical to its
-                            success. Increase the amount of users<br />
-                            by using smart web solutions. The more digital
-                            exposure your company gets, the more sales it will
-                            make.
-                        </p>
+                    <div
+                        class="block-services__desc__service"
+                        id="block-services__desc-3"
+                    >
+                    <div class="block-services__desc__service__img">
+
+                        <img src="@img/it-consultancy.png" alt="" />
                     </div>
-                </div>
-                <div
-                    class="block-services__desc__service"
-                    id="block-services__desc-6"
-                >
-                    <img src="@img/dedicated-teams.png" alt="" />
-                    <div class="block-services__text">
-                        <h4>Dedicated Teams</h4>
-                        <p>
-                            A company's digital presence is critical to its
-                            success. Increase the amount of users<br />
-                            by using smart web solutions. The more digital
-                            exposure your company gets, the more sales it will
-                            make.
-                        </p>
+                        <div class="block-services__text">
+                            <h4>IT Consultancy</h4>
+                            <p>
+                                IT consulting services have become an important
+                                component of a business culture. We provide a
+                                niche expertise, which allows business to solve
+                                business challenges, outline and accomplish
+                                important tasks while saving time and increasing
+                                company sustainability.
+                            </p>
+                        </div>
+                        <div class="block-services__slider-wrapper">
+                            <div class="auto-slider">
+                                <div class="auto-slider__element">
+                                    expertise
+                                </div>
+                                <div class="auto-slider__element">
+                                    Cost saving
+                                </div>
+                                <div class="auto-slider__element">
+                                    Measurable
+                                </div>
+                                <div class="auto-slider__element">
+                                    Available
+                                </div>
+                                <div class="auto-slider__element">
+                                    time saving
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="block-services__slider-wrapper">
-                    @@include('./auto-slider.html', {})
+                    <div
+                        class="block-services__desc__service"
+                        id="block-services__desc-4"
+                    >
+                    <div class="block-services__desc__service__img">
+                        <img src="@img/ideation-evaluation.png" alt="" />
+                    </div>
+                        <div class="block-services__text">
+                            <h4>ideation & evaluation</h4>
+                            <p>
+                                Great products come from great ideas. We provide
+                                an ideation service to help you in developing
+                                and testing innovative concepts that may be
+                                transformed into unique business solutions.
+                            </p>
+                        </div>
+                        <div class="block-services__slider-wrapper">
+                            <div class="auto-slider">
+                                <div class="auto-slider__element">
+                                    innovation
+                                </div>
+                                <div class="auto-slider__element">analysys</div>
+                                <div class="auto-slider__element">solution</div>
+                                <div class="auto-slider__element">
+                                    definition
+                                </div>
+                                <div class="auto-slider__element">
+                                    validation
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="block-services__desc__service"
+                        id="block-services__desc-5"
+                    >
+                    <div class="block-services__desc__service__img">
+
+                        <img src="@img/automated-software.png" alt="" />
+                    </div>
+
+                        <div class="block-services__text">
+                            <h4>Automated Software</h4>
+                            <p>
+                                Put your software on autopilot. You may boost
+                                the efficiency of your service partners and your
+                                organization while lowering operating costs
+                                using automated software.
+                            </p>
+                        </div>
+                        <div class="block-services__slider-wrapper">
+                            <div class="auto-slider">
+                                <div class="auto-slider__element">
+                                    productive
+                                </div>
+                                <div class="auto-slider__element">
+                                    autonomous
+                                </div>
+                                <div class="auto-slider__element">Reliable</div>
+                                <div class="auto-slider__element">
+                                    cost saving
+                                </div>
+                                <div class="auto-slider__element">focused</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="block-services__desc__service"
+                        id="block-services__desc-6"
+                    >
+                    <div class="block-services__desc__service__img">
+
+                        <img src="@img/dedicated-teams.png" alt="" />
+                    </div>
+                        <div class="block-services__text">
+                            <h4>Dedicated Teams</h4>
+                            <p>
+                                Hiring a dedicated workforce is less expensive
+                                than assembling your own team. Teams can be
+                                altered at any time during the project based on
+                                the current needs and requirements. Simple as
+                                that.
+                            </p>
+                        </div>
+                        <div class="block-services__slider-wrapper">
+                            <div class="auto-slider">
+                                <div class="auto-slider__element">Remote</div>
+                                <div class="auto-slider__element">
+                                    efficient
+                                </div>
+                                <div class="auto-slider__element">focused</div>
+                                <div class="auto-slider__element">
+                                    cost saving
+                                </div>
+                                <div class="auto-slider__element">flexible</div>
+                                <div class="auto-slider__element">
+                                    professionally
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

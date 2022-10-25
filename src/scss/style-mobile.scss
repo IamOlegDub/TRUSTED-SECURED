@@ -53,12 +53,12 @@
     }
 
     .header {
-        width: 360px;
+        max-width: 360px;
         margin: 0 auto;
         .container {
             max-width: 328px;
             margin: 0 auto;
-            padding: 0 10px;
+            padding: 0 16px;
         }
     }
     .page {
@@ -105,9 +105,9 @@
         }
         .block-hero {
             .logo-main-wrapper {
+                width: 100%;
                 .logo-main {
-                    width: 328px;
-                    height: 339.21px;
+                    width: 100%;
                 }
             }
         }
@@ -115,8 +115,7 @@
 
     .page-services {
         .block-services__desc__service__img {
-            width: 328px;
-            height: 184px;
+            width: 100%;
             overflow: hidden;
         }
         .block-desc p {
@@ -259,7 +258,7 @@
         }
     }
 
-    footer {
+    .footer {
         height: auto;
         margin-top: 103px;
         padding: 46px 0;
@@ -317,5 +316,13 @@
                 margin-top: 20px;
             }
         }
+    }
+}
+@media (max-width: 350px) {
+    .slick-arrow.slick-prev {
+        right: 169px !important;
+    }
+    .slick-arrow.slick-next {
+        right: 47px !important;
     }
 }

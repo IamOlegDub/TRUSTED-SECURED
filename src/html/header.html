@@ -1,28 +1,19 @@
 <header class="header">
     <div class="container">
-        <div class="header__logo">
+        <div class="header__logo" id="header-logo">
             <div class="header__logo__icon">
-                <img src="@img/LogoIcon.svg" alt="" />
+                <img src="@img/logo-header.svg" alt="" />
             </div>
-            <span>SoftPartners</span>
+            <!-- <span>SoftPartners</span> -->
         </div>
         <div class="header__burger">
             <span></span>
         </div>
         <div class="header__nav">
-            <div class="header__burger__logo">
-                <div class="header__burger__logo__icon">
-                    <img src="@img/LogoIcon.svg" alt="" />
-                </div>
-                <span>SoftPartners</span>
-            </div>
-            <div class="header__burger__close">
-                <span></span>
-            </div>
             <div class="header__nav__left">
                 <ul>
-                    <li>Services</li>
-                    <li>Projects</li>
+                    <li><a id="services" href="">Services</a></li>
+                    <li><a id="projects" href="">Projects</a></li>
                     <li class="burger__open">
                         <span class="burger__open__toggler"
                             ><span>About us</span>
@@ -46,9 +37,20 @@
                     </li>
                 </ul>
             </div>
+            <div class="header__burger__logo">
+                <div class="header__burger__logo__icon">
+                    <img src="@img/logo-header.svg" alt="" />
+                </div>
+                <!-- <span>SoftPartners</span> -->
+            </div>
+            <div class="header__burger__close">
+                <span></span>
+            </div>
             <div class="header__nav__right">
                 <ul>
-                    <li>Contacts</li>
+                    <li class="header__nav__right__contacts">
+                        <a id="contacts" href="">Contacts</a>
+                    </li>
                     <li>
                         <div class="language-select">
                             <div class="language-option active" data-lang="ua">
@@ -64,6 +66,11 @@
                                         src="@img/keyboard_arrow_up_hover.svg"
                                         alt=""
                                     />
+                                    <img
+                                        class="language-arrow__down-hover"
+                                        src="@img/keyboard_arrow_down_hover.svg"
+                                        alt=""
+                                    />
                                 </span>
                             </div>
                             <div class="language-option" data-lang="en">
@@ -77,6 +84,11 @@
                                     <img
                                         class="language-arrow__up-hover"
                                         src="@img/keyboard_arrow_up_hover.svg"
+                                        alt=""
+                                    />
+                                    <img
+                                        class="language-arrow__down-hover"
+                                        src="@img/keyboard_arrow_down_hover.svg"
                                         alt=""
                                     />
                                 </span>
