@@ -36,26 +36,40 @@
             <div class="block-contacts__form">
                 <form
                     id="start-project-form"
-                    action="submit"
+                    action="#"
                     class="form _fourth _anim-items"
                 >
-                    <label id="label-name" for="name">Name*</label>
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        placeholder="Your name..."
-                    />
-                    <span id="require-name">This field is required!</span>
-                    <label id="label-email" for="email">email*</label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Your email..."
-                    />
-                    <span id="require-email">This field is required!</span>
-                    <span id="wrong-email">Wrong email address!</span>
+                    <div class="input-name-wrapper">
+                        <label id="label-name" class="label-name" for="name"
+                            >Name*</label
+                        >
+                        <input
+                            class="form-name _req"
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Your name..."
+                        />
+                        <span id="require-name" class="require-name"
+                            >This field is required!</span
+                        >
+                    </div>
+                    <div class="input-email-wrapper">
+                        <label id="label-email" class="label-email" for="email"
+                            >email*</label
+                        >
+                        <input
+                            class="form-email _req _email"
+                            type="text"
+                            id="email"
+                            name="email"
+                            placeholder="Your email..."
+                        />
+                        <span id="require-email" class="require-email"
+                            >This field is required!</span
+                        >
+                        <span id="wrong-email">Wrong email address!</span>
+                    </div>
                     <label id="label-comment" for="comment">Your comment</label>
                     <input
                         type="text"
@@ -63,7 +77,11 @@
                         name="comment"
                         placeholder="Share your vision of the project..."
                     />
-                    <div class="submit-container btn-filled _fifth _anim-items">
+                    <div
+                        class="g-recaptcha"
+                        data-sitekey="6LcrEbwiAAAAAEb0f4mfQIBCYtL79cAYE8xtyu9w"
+                    ></div>
+                    <div class="submit-container _fifth _anim-items">
                         <input
                             class="show_popup__form"
                             id="start-project"
@@ -71,6 +89,9 @@
                             value="Start project"
                             rel="popup2"
                         />
+                        <!-- <button type="submit" class="show_popup__form">
+                            Start project
+                        </button> -->
                     </div>
                 </form>
             </div>

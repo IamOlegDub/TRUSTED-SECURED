@@ -171,20 +171,6 @@ $ph: rgba(13, 13, 13, 0.4);
             ),
             linear-gradient(90deg, #f72f16 0%, #9022cb 100%);
     }
-    // &:active:before {
-    //     content: "";
-    //     position: absolute;
-    //     width: 80px;
-    //     height: 80px;
-    //     left: calc(50% - 80px / 2);
-    //     top: calc(50% - 80px / 2 + 0.5px);
-    //     // background: rgba(255, 255, 255, 0.32);
-    //     border-radius: 50%;
-    //     background: linear-gradient(180deg, transparent 15px, transparent 0) top,
-    //         linear-gradient(0deg, transparent 15px, rgba(255, 255, 255, 0.32) 0)
-    //             bottom;
-    //     background-size: 1% 81%;
-    // }
 }
 @mixin slider {
     .block-slider {
@@ -209,6 +195,7 @@ $ph: rgba(13, 13, 13, 0.4);
             line-height: 140%;
             color: $black;
         }
+
         .slick-track {
             display: flex;
         }
@@ -427,23 +414,23 @@ $ph: rgba(13, 13, 13, 0.4);
                 background-size: $size !important;
                 background-repeat: no-repeat !important;
             }
-            @media (max-width: 600px) {
-                &::after {
-                    opacity: 1;
-                    // transform: translateY(100%);
-                    content: "";
-                    position: absolute;
-                    top: 5px;
-                    left: 5px;
-                    width: 318px;
-                    height: 494px;
-                    border-radius: 5px;
-                    background: $gradient, url($url);
-                    background-position: center !important;
-                    background-size: $size !important;
-                    background-repeat: no-repeat !important;
-                }
-            }
+            // @media (max-width: 600px) {
+            //     &::after {
+            //         opacity: 1;
+            //         // transform: translateY(100%);
+            //         content: "";
+            //         position: absolute;
+            //         top: 5px;
+            //         left: 5px;
+            //         width: 318px;
+            //         height: 494px;
+            //         border-radius: 5px;
+            //         background: $gradient, url($url);
+            //         background-position: center !important;
+            //         background-size: $size !important;
+            //         background-repeat: no-repeat !important;
+            //     }
+            // }
         }
         .block-tech__slider__cards__card__desc {
             button {

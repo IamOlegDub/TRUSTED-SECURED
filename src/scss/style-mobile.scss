@@ -5,31 +5,6 @@
     body.lock {
         overflow: hidden;
     }
-
-    // .page-hero {
-    //     display: none;
-    // }
-    // .page-services {
-    //     display: none;
-    // }
-    // .page-feedbacks {
-    //     display: none;
-    // }
-    // .page-projects {
-    //     display: none;
-    // }
-    // .page-partners {
-    //     display: none;
-    // }
-    // .page-technologies {
-    //     display: none;
-    // }
-    // .page-contacts {
-    //     display: none;
-    // }
-    // footer {
-    //     display: none;
-    // }
     .support-popup {
         top: 47.8%;
         .desc {
@@ -98,7 +73,7 @@
     }
 
     .page-hero {
-        padding-bottom: 100px;
+        padding-bottom: 100px !important;
         .block-hero__buttons {
             flex-direction: column;
             gap: 14px;
@@ -186,7 +161,7 @@
     }
 
     .page-partners {
-        padding-bottom: 140px;
+        padding-bottom: 140px !important;
         .block-slider {
             .slick-arrow.slick-prev {
                 right: 204px;
@@ -211,20 +186,52 @@
     }
 
     .page-technologies {
-        .absolute_tablet-visible {
-            width: 100%;
-            .block-slider__center-mode.block-tech__slider.tablet-visible {
-                .slick-arrow.slick-prev {
-                    right: 204px;
-                }
-
-                .slick-arrow.slick-next {
-                    right: 10px;
-                }
-                .slick-dots {
-                    right: 135px;
-                }
+        width: 100%;
+        .block-slider__center-mode.block-tech__slider.tablet-visible {
+            .slick-arrow.slick-prev {
+                right: 204px;
             }
+
+            .slick-arrow.slick-next {
+                right: 10px;
+            }
+            .slick-dots {
+                right: 135px;
+            }
+        }
+
+        .block-tech__slider__cards__card:hover
+            .block-tech__slider__cards__card__img {
+            width: 328px;
+        }
+        .block-tech__slider__cards__card:hover
+            .block-tech__slider__cards__card__img::after {
+            width: 318px !important;
+        }
+
+        .block-tech__slider__cards__card
+            .block-tech__slider__cards__card__desc {
+            width: 90%;
+        }
+        .block-tech__slider__cards__card:hover
+            .block-tech__slider__cards__card__desc {
+            width: 80%;
+        }
+        .block-tech__slider__cards__card:hover
+            .block-tech__slider__cards__card__desc {
+            gap: 10px;
+        }
+        .block-tech__slider__cards__card.databases-card:hover
+            .block-tech__slider__cards__card__img::after {
+            background-size: 280% !important;
+        }
+        .block-tech__slider__cards__card.automation-card:hover
+            .block-tech__slider__cards__card__img::after {
+            background-size: 240% !important;
+        }
+        .block-tech__slider__cards__card.design-card:hover
+            .block-tech__slider__cards__card__img::after {
+            background-size: 115% !important;
         }
     }
 
@@ -323,6 +330,46 @@
         right: 169px !important;
     }
     .slick-arrow.slick-next {
-        right: 47px !important;
+        right: 34px !important;
+    }
+    .page-technologies {
+        .block-tech__slider__cards__card {
+            width: 310px;
+            &::before,
+            &::after {
+                width: 310px;
+            }
+            &__desc {
+                width: 100% !important;
+            }
+            &:hover {
+                .block-tech__slider__cards__card__img {
+                    width: 310px;
+                    &::after {
+                        width: 300px !important;
+                    }
+                }
+                .block-tech__slider__cards__card__desc {
+                    width: 92% !important;
+                    gap: 10px;
+                }
+            }
+        }
+        .block-tech__slider__cards__card.databases-card:hover
+            .block-tech__slider__cards__card__img::after {
+            background-size: 300% !important;
+        }
+        .block-tech__slider__cards__card.infrastructure-card:hover
+            .block-tech__slider__cards__card__img::after {
+            background-size: 115% !important;
+        }
+        .block-tech__slider__cards__card.automation-card:hover
+            .block-tech__slider__cards__card__img::after {
+            background-size: 250% !important;
+        }
+        .block-tech__slider__cards__card.design-card:hover
+            .block-tech__slider__cards__card__img::after {
+            background-size: 120% !important;
+        }
     }
 }

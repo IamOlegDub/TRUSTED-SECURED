@@ -3,8 +3,9 @@ $duration: 0.8s;
 $type: ease-out;
 $delay: 1ms;
 $x: 0;
-$y: 100px;
+$y: 80px;
 $contact-anim-dur: 4s;
+$services-anim-dur: 1.8s;
 
 @mixin fadeInUp($delay: $delay, $x: $x, $y: $y) {
     opacity: 0;
@@ -43,67 +44,308 @@ $contact-anim-dur: 4s;
     ._first._anim-items {
         @include fadeIn();
     }
-    ._second._anim-items {
-        // opacity: 0;
-        // transform: translate(140%, 220%);
-        // transition: all 2s ease-out 0.2s;
-        transform: translate(140%, 220%);
-        // display: none;
-        &._active {
-            animation-name: left-top__right;
-            animation-duration: 0.8s;
-            animation-timing-function: ease-out;
-            animation-delay: 1ms;
-            animation-fill-mode: forwards;
-            animation-iteration-count: 1;
-            // transform: translate(-30%, 0%) translate(0%, 0%);
-            opacity: 1;
-            // transform: translate(0%, 0%);
-        }
-    }
-    @keyframes left-top__right {
-        0% {
-            transform: translate(140%, 220%);
-            opacity: 0;
-            display: none;
-        }
-        50% {
-            transform: translate(-30%, 0%);
-            display: block;
-        }
-        100% {
-            transform: translate(0%, 0%);
-            opacity: 1;
-            display: block;
-        }
-    }
-    ._third._anim-items {
+    ._seconds._anim-items {
         @include fadeInUp();
     }
-    ._fourth._anim-items {
-        @include fadeInUp(0.2s);
-    }
-    ._fifth._anim-items {
-        @include fadeInUp(0.4s);
-    }
-    ._sixth._anim-items {
-        @include fadeInUp(0.6s);
-    }
-    ._seventh._anim-items {
-        @include fadeInUp(0.8s);
-    }
-    ._eighth._anim-items {
-        @include fadeInUp(1s);
+    ._third2._anim-items {
+        @include fadeInUp();
     }
 
-    .block-services {
-        transform: translate(0, 50px);
-        transition: all 0.8s ease-out 1ms;
-
+    ._third._anim-items {
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(0, 100%);
         &._active {
+            animation-name: list1;
+            position: relative;
+            transition: all 0.8s ease-out 1ms;
+            animation-duration: $services-anim-dur;
+            animation-timing-function: ease-out;
+            animation-delay: 1ms;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    @keyframes list1 {
+        0% {
+            opacity: 0;
+            visibility: hidden;
+        }
+        15% {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(0, 0);
+        }
+        100% {
+            opacity: 1;
+            visibility: visible;
             transform: translate(0, 0);
         }
     }
+    ._fourth._anim-items {
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(0, 100%);
+        &._active {
+            animation-name: list2;
+            position: relative;
+            transition: all 0.8s ease-out 1ms;
+            animation-duration: $services-anim-dur;
+            animation-timing-function: ease-out;
+            animation-delay: 1ms;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    @keyframes list2 {
+        0% {
+            opacity: 0;
+            visibility: hidden;
+        }
+        15% {
+            opacity: 0;
+            visibility: hidden;
+        }
+        30% {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(0, 0);
+        }
+        100% {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(0, 0);
+        }
+    }
+    ._fifth._anim-items {
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(0, 100%);
+        &._active {
+            animation-name: list3;
+            position: relative;
+            transition: all 0.8s ease-out 1ms;
+            animation-duration: $services-anim-dur;
+            animation-timing-function: ease-out;
+            animation-delay: 1ms;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    @keyframes list3 {
+        0% {
+            opacity: 0;
+            visibility: hidden;
+        }
+        15% {
+            opacity: 0;
+            visibility: hidden;
+        }
+        30% {
+            opacity: 0;
+            visibility: hidden;
+        }
+        45% {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(0, 0);
+        }
+        100% {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(0, 0);
+        }
+    }
+    ._sixth._anim-items {
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(0, 100%);
+        &._active {
+            animation-name: list4;
+            position: relative;
+            transition: all 0.8s ease-out 1ms;
+            animation-duration: $services-anim-dur;
+            animation-timing-function: ease-out;
+            animation-delay: 1ms;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    @keyframes list4 {
+        0% {
+            opacity: 0;
+            visibility: hidden;
+        }
+        15% {
+            opacity: 0;
+            visibility: hidden;
+        }
+        30% {
+            opacity: 0;
+            visibility: hidden;
+        }
+        45% {
+            opacity: 0;
+            visibility: hidden;
+        }
+        60% {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(0, 0);
+        }
+        75% {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(0, 0);
+        }
+        90% {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(0, 0);
+        }
+        100% {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(0, 0);
+        }
+    }
+    ._seventh._anim-items {
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(0, 100%);
+        &._active {
+            animation-name: list5;
+            position: relative;
+            transition: all 0.8s ease-out 1ms;
+            animation-duration: $services-anim-dur;
+            animation-timing-function: ease-out;
+            animation-delay: 1ms;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    @keyframes list5 {
+        0% {
+            opacity: 0;
+            visibility: hidden;
+        }
+        15% {
+            opacity: 0;
+            visibility: hidden;
+        }
+        30% {
+            opacity: 0;
+            visibility: hidden;
+        }
+        45% {
+            opacity: 0;
+            visibility: hidden;
+        }
+        60% {
+            opacity: 0;
+            visibility: hidden;
+        }
+        75% {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(0, 0);
+        }
+        90% {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(0, 0);
+        }
+        100% {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(0, 0);
+        }
+    }
+    ._eighth._anim-items {
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(0, 200%);
+        &._active {
+            animation-name: list6;
+            position: relative;
+            transition: all 0.8s ease-out 1ms;
+            animation-duration: $services-anim-dur;
+            animation-timing-function: ease-out;
+            animation-delay: 1ms;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    @keyframes list6 {
+        0% {
+            opacity: 0;
+            visibility: hidden;
+        }
+        15% {
+            opacity: 0;
+            visibility: hidden;
+        }
+        30% {
+            opacity: 0;
+            visibility: hidden;
+        }
+        45% {
+            opacity: 0;
+            visibility: hidden;
+        }
+        60% {
+            opacity: 0;
+            visibility: hidden;
+        }
+        75% {
+            opacity: 0;
+            visibility: hidden;
+        }
+        90% {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(0, 0);
+        }
+        100% {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(0, 0);
+        }
+    }
+
+    // ._third._anim-items {
+    //     @include fadeInUp();
+    // }
+    // ._fourth._anim-items {
+    //     @include fadeInUp(0.2s);
+    // }
+    // ._fifth._anim-items {
+    //     @include fadeInUp(0.4s);
+    // }
+    // ._sixth._anim-items {
+    //     @include fadeInUp(0.6s);
+    // }
+    // ._seventh._anim-items {
+    //     @include fadeInUp(0.8s);
+    // }
+    // ._eighth._anim-items {
+    //     @include fadeInUp(1s);
+    // }
+
+    // .block-services {
+    //     transform: translate(0, 50px);
+    //     transition: all 0.8s ease-out 1ms;
+
+    //     &._active {
+    //         transform: translate(0, 0);
+    //     }
+    // }
 }
 
 .page-feedbacks {
@@ -128,39 +370,8 @@ $contact-anim-dur: 4s;
             }
         }
     }
-    // ._fourth._clone {
-    //     position: absolute;
-    //     top: 0px;
-    //     left: 0;
-    //     width: 50%;
-    //     opacity: 0;
-    //     visibility: hidden;
-    //     transition: all 0.8s ease-out 3s;
-
-    //     &._active {
-    //         opacity: 1 !important;
-
-    //         visibility: visible;
-    //     }
-    // }
     ._fourth._anim-items {
         position: relative;
-        @include fadeInUp();
-    }
-    @keyframes slideOutRight {
-        0% {
-            transform: translateX(0);
-        }
-        10% {
-            opacity: 1;
-            visibility: visible;
-        }
-        100% {
-            visibility: hidden;
-            transform: translateX(100%);
-        }
-    }
-    ._fifth._anim-items {
         @include fadeInUp();
     }
 }
@@ -407,6 +618,266 @@ $contact-anim-dur: 4s;
             opacity: 1;
             visibility: visible;
             transform: translate(0, 0);
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .page-contacts {
+        ._first._anim-items {
+            @include fadeIn();
+        }
+        ._america {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .block-contacts__maps {
+            position: relative;
+        }
+        // ._second._anim-items._active ._america {
+        //     animation-play-state: paused;
+        //     visibility: visible;
+        //     opacity: 1;
+        //     transform: scale(0.8);
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        // }
+        // ._second._anim-items._active ._eurasia {
+        //     animation-play-state: paused;
+        //     visibility: visible;
+        //     opacity: 1;
+        //     transform: scale(0.8);
+        //     position: absolute;
+        //     top: 0;
+        //     left: -93px;
+        // }
+        // ._third._anim-items.location__img {
+        //     opacity: 0;
+        //     visibility: hidden;
+        //     &._active {
+        //         position: absolute;
+        //         top: 6px;
+        //         left: -82px;
+        //     }
+        // }
+        // ._second._anim-items._active ._america {
+        //     animation-name: map-america;
+        //     position: relative;
+        //     transition: all 0.8s ease-out 1ms;
+        //     animation-duration: $contact-anim-dur;
+        //     animation-timing-function: ease-out;
+        //     animation-delay: 1ms;
+        //     animation-iteration-count: 1;
+        //     animation-fill-mode: forwards;
+        // }
+        // @keyframes map-america {
+        //     0% {
+        //         opacity: 0;
+        //         visibility: hidden;
+        //         top: 400px;
+        //         left: -200%;
+        //         transform: rotate(-45deg);
+        //     }
+        //     45% {
+        //         top: 25%;
+        //         left: 5%;
+        //         opacity: 1;
+        //         transform: scale(3) rotate(0deg);
+        //         visibility: visible;
+        //     }
+        //     60% {
+        //         top: 0;
+        //         left: 0;
+        //         opacity: 1;
+        //         visibility: visible;
+        //         transform: scale(1) rotate(0deg);
+        //     }
+        //     100% {
+        //         top: 0;
+        //         left: 0;
+        //         opacity: 1;
+        //         visibility: visible;
+        //         transform: scale(1) rotate(0deg);
+        //     }
+        // }
+        // ._eurasia {
+        //     opacity: 0;
+        //     visibility: hidden;
+        // }
+        // ._second._anim-items._active ._eurasia {
+        //     animation-name: map-eurasia;
+        //     position: relative;
+        //     transition: all 0.8s ease-out 1ms;
+        //     animation-duration: $contact-anim-dur;
+        //     animation-timing-function: ease-out;
+        //     animation-delay: 1ms;
+        //     animation-iteration-count: 1;
+        //     animation-fill-mode: forwards;
+        // }
+        // @keyframes map-eurasia {
+        //     0% {
+        //         opacity: 0;
+        //         visibility: hidden;
+        //         top: 400px;
+        //         left: 300%;
+        //         transform: rotate(60deg);
+        //     }
+        //     45% {
+        //         top: 25%;
+        //         left: 90%;
+        //         opacity: 1;
+        //         transform: scale(3) rotate(0deg);
+
+        //         visibility: visible;
+        //     }
+        //     60% {
+        //         top: 0;
+        //         left: 0;
+        //         opacity: 1;
+        //         visibility: visible;
+        //         transform: scale(1) rotate(0deg);
+        //     }
+        //     100% {
+        //         top: 0;
+        //         left: 0;
+        //         opacity: 1;
+        //         visibility: visible;
+        //         transform: scale(1) rotate(0deg);
+        //     }
+        // }
+        // ._third._anim-items.location__img {
+        //     opacity: 0;
+        //     visibility: hidden;
+        //     &._active {
+        //         animation-name: map-location;
+        //         position: relative;
+        //         transition: all 0.8s ease-out 1ms;
+        //         animation-duration: $contact-anim-dur;
+        //         animation-timing-function: ease-out;
+        //         animation-delay: 1ms;
+        //         animation-iteration-count: 1;
+        //         animation-fill-mode: forwards;
+        //     }
+        // }
+        // @keyframes map-location {
+        //     0% {
+        //         opacity: 0;
+        //         visibility: hidden;
+        //     }
+        //     15% {
+        //         opacity: 0;
+        //         visibility: hidden;
+        //     }
+        //     30% {
+        //         opacity: 0;
+        //         visibility: hidden;
+        //     }
+        //     35% {
+        //         opacity: 0;
+        //         visibility: hidden;
+        //     }
+        //     75% {
+        //         opacity: 1;
+        //         visibility: visible;
+        //     }
+        //     100% {
+        //         opacity: 1;
+        //         visibility: visible;
+        //     }
+        // }
+        ._fourth._anim-items {
+            opacity: 0;
+            visibility: hidden;
+            &._active {
+                animation-name: address;
+                position: relative;
+                transition: all 0.8s ease-out 1ms;
+                animation-duration: $contact-anim-dur;
+                animation-timing-function: ease-out;
+                animation-delay: 1ms;
+                animation-iteration-count: 1;
+                animation-fill-mode: forwards;
+            }
+        }
+        @keyframes address {
+            0% {
+                opacity: 0;
+                visibility: hidden;
+            }
+            15% {
+                opacity: 1;
+                visibility: visible;
+            }
+            30% {
+                opacity: 1;
+                visibility: visible;
+            }
+            45% {
+                opacity: 1;
+                visibility: visible;
+            }
+            65% {
+                opacity: 1;
+                visibility: visible;
+            }
+            100% {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        ._fifth._anim-items {
+            opacity: 0;
+            visibility: hidden;
+            transform: translate(0, 150px);
+        }
+        ._fourth._anim-items._active ._fifth._anim-items {
+            animation-name: start-proj-btn;
+            position: relative;
+            transition: all 0.8s ease-out 1ms;
+            animation-duration: $contact-anim-dur;
+            animation-timing-function: ease-out;
+            animation-delay: 1ms;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        @keyframes start-proj-btn {
+            0% {
+                opacity: 0;
+                visibility: hidden;
+            }
+            15% {
+                opacity: 0;
+                visibility: hidden;
+            }
+            30% {
+                opacity: 1;
+                visibility: visible;
+                transform: translate(0, 0);
+            }
+            45% {
+                opacity: 1;
+                visibility: visible;
+                transform: translate(0, 0);
+            }
+            65% {
+                opacity: 1;
+                visibility: visible;
+                transform: translate(0, 0);
+            }
+            80% {
+                opacity: 1;
+                visibility: visible;
+                transform: translate(0, 0);
+            }
+            100% {
+                opacity: 1;
+                visibility: visible;
+                transform: translate(0, 0);
+            }
+        }
+        .block-contacts {
+            margin-bottom: 278px;
         }
     }
 }

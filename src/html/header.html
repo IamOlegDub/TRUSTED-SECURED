@@ -2,7 +2,9 @@
     <div class="container">
         <div class="header__logo" id="header-logo">
             <div class="header__logo__icon">
-                <img src="@img/logo-header.svg" alt="" />
+                <a href="index.html"
+                    ><img src="@img/logo-header.svg" alt=""
+                /></a>
             </div>
             <!-- <span>SoftPartners</span> -->
         </div>
@@ -12,9 +14,13 @@
         <div class="header__nav">
             <div class="header__nav__left">
                 <ul>
-                    <li><a id="services" href="">Services</a></li>
-                    <li><a id="projects" href="">Projects</a></li>
-                    <li class="burger__open">
+                    <li class="header__nav__list-item">
+                        <a id="services" href=""><span>Services</span></a>
+                    </li>
+                    <li class="header__nav__list-item">
+                        <a id="projects" href=""><span>Projects</span></a>
+                    </li>
+                    <li class="burger__open header__nav__list-item">
                         <span class="burger__open__toggler"
                             ><span>About us</span>
                             <span class="burger__open__arrow">
@@ -41,20 +47,21 @@
                 <div class="header__burger__logo__icon">
                     <img src="@img/logo-header.svg" alt="" />
                 </div>
-                <!-- <span>SoftPartners</span> -->
             </div>
             <div class="header__burger__close">
                 <span></span>
             </div>
             <div class="header__nav__right">
                 <ul>
-                    <li class="header__nav__right__contacts">
-                        <a id="contacts" href="">Contacts</a>
+                    <li
+                        class="header__nav__right__contacts header__nav__list-item"
+                    >
+                        <a id="contacts" href=""><span>Contacts</span></a>
                     </li>
                     <li>
                         <div class="language-select">
-                            <div class="language-option active" data-lang="ua">
-                                <span>ua</span>
+                            <div class="language-option active" data-lang="en">
+                                <span>en</span>
                                 <span>
                                     <img
                                         class="language-arrow__down"
@@ -73,8 +80,8 @@
                                     />
                                 </span>
                             </div>
-                            <div class="language-option" data-lang="en">
-                                <span>en</span>
+                            <div class="language-option" data-lang="ua">
+                                <span>ua</span>
                                 <span>
                                     <img
                                         class="language-arrow__down"
@@ -95,7 +102,7 @@
                             </div>
                         </div>
                     </li>
-                    <li>
+                    <li class="burger-support">
                         <a
                             class="show_popup support-button__burger"
                             id="burger-button-left"
@@ -109,6 +116,36 @@
                                 alt=""
                             />
                         </a>
+                    </li>
+                    <li class="burger-social">
+                        <!-- <span>our social</span> -->
+                        <div class="burger-social-icons">
+                            <div class="social-icons__wrapper">
+                                <a
+                                    href="https://www.facebook.com/profile.php?id=100076259160999"
+                                    target="_blank"
+                                >
+                                    <img src="@img/facebook.svg" alt=""
+                                /></a>
+                            </div>
+                            <div class="social-icons__wrapper">
+                                <a
+                                    href="https://www.linkedin.com/company/softpartners/?viewAsMember=true"
+                                    target="_blank"
+                                >
+                                    <img src="@img/LinkedIn_logo.svg" alt="" />
+                                </a>
+                            </div>
+
+                            <!-- <div class="social-icons__wrapper">
+                                <a
+                                    href="https://www.instagram.com//"
+                                    target="_blank"
+                                >
+                                    <img src="@img/instagram_logo.svg" alt=""
+                                /></a>
+                            </div> -->
+                        </div>
                     </li>
                 </ul>
             </div>
