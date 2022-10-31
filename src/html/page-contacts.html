@@ -1,4 +1,5 @@
-<div class="page page-contacts">
+<div class="page page-contacts contacts">
+    <a name="contacts" id="contacts" href=""></a>
     <div class="wrap">
         <div class="block-contacts-title _first _anim-items">
             <h2>Let’s get <br /><span>in touch!</span></h2>
@@ -38,6 +39,7 @@
                     id="start-project-form"
                     action="#"
                     class="form _fourth _anim-items"
+                    rel="popup2"
                 >
                     <div class="input-name-wrapper">
                         <label id="label-name" class="label-name" for="name"
@@ -73,18 +75,35 @@
                     <label id="label-comment" for="comment">Your comment</label>
                     <input
                         type="text"
+                        class="input-comment"
                         id="comment"
                         name="comment"
                         placeholder="Share your vision of the project..."
                     />
-                    <div
+                    <p style="font-size: 10px; color: gray">
+                        This site is protected by reCAPTCHA and the Google
+                        <a
+                            style="color: gray"
+                            href="https://policies.google.com/privacy"
+                            >Privacy Policy</a
+                        >
+                        and
+                        <a
+                            style="color: gray"
+                            href="https://policies.google.com/terms"
+                            >Terms of Service</a
+                        >
+                        apply.
+                    </p>
+                    <!-- <div
                         class="g-recaptcha"
                         data-sitekey="6LcrEbwiAAAAAEb0f4mfQIBCYtL79cAYE8xtyu9w"
-                    ></div>
+                    ></div> -->
+                    <input type="hidden" id="token" name="token" />
                     <div class="submit-container _fifth _anim-items">
                         <input
                             class="show_popup__form"
-                            id="start-project"
+                            id="start-project-form__button"
                             type="submit"
                             value="Start project"
                             rel="popup2"

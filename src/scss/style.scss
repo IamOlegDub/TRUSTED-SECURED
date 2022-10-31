@@ -41,6 +41,9 @@ ul,
 ol {
     list-style-type: none;
 }
+.grecaptcha-badge {
+    visibility: hidden;
+}
 
 .page {
     max-width: 1440px;
@@ -1384,6 +1387,7 @@ p {
                 }
                 .submit-container {
                     max-width: 172px;
+                    margin-top: 20px;
                 }
                 input[type="submit"] {
                     @include filled-button;
@@ -1430,6 +1434,9 @@ p {
                         border-bottom: 3px solid #b00020;
                     }
                 }
+                .input-comment {
+                    margin-bottom: 0 !important;
+                }
             }
         }
     }
@@ -1470,7 +1477,7 @@ p {
 
     .desc {
         width: 538px;
-        height: 232px;
+        // height: 232px;
         background-color: #eee;
         padding: 24px;
         margin: 0;
@@ -1540,7 +1547,7 @@ p {
     .desc {
         display: flex;
         justify-content: space-between;
-        height: 250px;
+        height: 288px;
         padding: 24px 60px;
         h4 {
             margin-bottom: 0;
@@ -1580,9 +1587,12 @@ p {
     }
     .footer-container {
         padding: 50px 10px 0;
-        max-width: 1200px;
+        // max-width: 1200px;
+        padding-left: 120px;
+        padding-right: 120px;
         margin: 0 auto;
         padding-bottom: 45px;
+
         .footer__column {
             flex-basis: 24%;
             &__logo {

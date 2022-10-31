@@ -3,14 +3,7 @@ import * as flsFunctions from "./modules/functions.js";
 flsFunctions.isWebp();
 
 $(document).ready(function () {
-    // $(".block-tech__slider__cards__card").hover(function () {
-    //     $(".block-tech__slider__cards__card__img").fadeOut();
-    // });
-    // setInterval(changeGradient, )
-
-    // $('.block-hero__offer h1 span')
-
-    // language select
+    // language select ================================================================
     $(".language-select").click(function () {
         $(this).toggleClass("open");
         $(".header__nav__right__contacts").toggleClass("pos");
@@ -24,71 +17,104 @@ $(document).ready(function () {
         $(this).toggleClass("active");
     });
 
-    $("#explore-company, #services").click(function (e) {
+    // burger ====================================================================
+    $(".header__burger, .burger-menu_overlay").click(function (e) {
         e.preventDefault();
-        $("html, body").animate(
-            {
-                scrollTop: $("#page-services").offset().top - 72,
-            },
-            1000
+        $(".header__burger, .header__nav, .burger-menu_overlay").toggleClass(
+            "active"
         );
-    });
-    $("#projects").click(function (e) {
-        e.preventDefault();
-        $("html, body").animate(
-            {
-                scrollTop: $(".page-projects").offset().top - 72,
-            },
-            1000
-        );
-    });
-    $("#contacts").click(function (e) {
-        e.preventDefault();
-        $(location).attr("href", "index.html");
-        $("html, body").animate(
-            {
-                scrollTop: $(".page-contacts").offset().top - 72,
-            },
-            1000
-        );
-    });
-    $("#start-project").click(function () {
-        $("html, body").animate(
-            {
-                scrollTop: $(".page-contacts").offset().top - 72,
-            },
-            1000
-        );
-    });
-    $("#get-in-touch").click(function (e) {
-        e.preventDefault();
-        $("html, body").animate(
-            {
-                scrollTop: $(".page-contacts").offset().top - 72,
-            },
-            1000
-        );
-    });
-    // $("#header-logo").click(function (e) {
-    //     e.preventDefault();
-    //     $("html, body").animate(
-    //         {
-    //             scrollTop: $(".page-hero").offset().top - 72,
-    //         },
-    //         1000
-    //     );
-    // });
-    // $("#header-logo").click(function (e) {
-    //     e.preventDefault();
-    //     $("html, body").animate(
-    //         {
-    //             scrollTop: $(".page-hero").offset().top - 72,
-    //         },
-    //         1000
-    //     );
-    // });
 
-    // about us list
+        // ще розібратися
+        $("body").toggleClass("lock");
+        if ($("body").hasClass("lock")) {
+            $("body").removeClass("lock");
+        }
+    });
+
+    // переходи по сторінці і сторінках ================================================
+
+    const currUrl = `${location.protocol}//${window.location.host}/`;
+
+    $("#explore-company, #link-to-services").click(function (e) {
+        if ($(location)[0].href === currUrl) {
+            e.preventDefault();
+            $("html, body").animate(
+                {
+                    scrollTop: $("#services").offset().top - 72,
+                },
+                1000
+            );
+        } else {
+            e.preventDefault();
+            $(location).attr("href", "/#services");
+        }
+        $(".header__burger, .header__nav, .burger-menu_overlay").removeClass(
+            "active"
+        );
+        $("body").removeClass("lock");
+    });
+    $("#link-to-projects").click(function (e) {
+        if ($(location)[0].href === currUrl) {
+            e.preventDefault();
+            $("html, body").animate(
+                {
+                    scrollTop: $("#projects").offset().top - 72,
+                },
+                1000
+            );
+        } else {
+            e.preventDefault();
+            $(location).attr("href", "/#projects");
+        }
+        $(".header__burger, .header__nav, .burger-menu_overlay").removeClass(
+            "active"
+        );
+        $("body").removeClass("lock");
+    });
+
+    $("#link-to-contacts, #get-in-touch, #start-project").click(function (e) {
+        if ($(location)[0].href === currUrl) {
+            e.preventDefault();
+            $("html, body").animate(
+                {
+                    scrollTop: $("#contacts").offset().top - 72,
+                },
+                1000
+            );
+        } else {
+            e.preventDefault();
+            $(location).attr("href", "/#contacts");
+        }
+        $(".header__burger, .header__nav, .burger-menu_overlay").removeClass(
+            "active"
+        );
+        $("body").removeClass("lock");
+    });
+
+    $("#link-to-hero, #link-to-hero-from-footer, #burger-link-to-hero").click(
+        function (e) {
+            if ($(location)[0].href === currUrl) {
+                e.preventDefault();
+                $("html, body").animate(
+                    {
+                        scrollTop: $("#hero").offset().top - 72,
+                    },
+                    1000
+                );
+            } else {
+                e.preventDefault();
+                $(location).attr("href", "/#hero");
+            }
+            $(
+                ".header__burger, .header__nav, .burger-menu_overlay"
+            ).removeClass("active");
+            $("body").removeClass("lock");
+        }
+    );
+
+    history.pushState("", document.title, window.location.pathname);
+
+    // about us list =============================================================
     $(".burger__open__toggler").click(function (e) {
         e.preventDefault();
         $(
@@ -96,7 +122,7 @@ $(document).ready(function () {
         ).toggleClass("list-open");
     });
 
-    // buttons click effect
+    // buttons click effect =====================================================
     $(".btn-outlined").on("click", function (e) {
         e.preventDefault();
         $('<div class="cursor">')
@@ -136,7 +162,7 @@ $(document).ready(function () {
             });
     });
 
-    // sliders
+    // sliders ==================================================================
 
     $(".block-slider").slick({
         dots: true,
@@ -200,12 +226,12 @@ $(document).ready(function () {
         slidesToScroll: 2,
     });
 
-    // close-button cookies
+    // close-button cookies ===================================================
     $("#cookies-close-btn").click(function () {
         $(".banner-cookies").addClass("js-hidden");
     });
 
-    // service tabs
+    // service tabs ==============================================================
     $(".block-services__list li h3").click(function () {
         $(".block-services__list li h3").removeClass("js-pressed");
         $(this).addClass("js-pressed");
@@ -266,7 +292,7 @@ $(document).ready(function () {
         $("#block-services__auto-slider__6").addClass("active");
     });
 
-    // auto-slider
+    // auto-slider ==============================================================
 
     $(".auto-slider").slick({
         slidesToShow: 3,
@@ -312,22 +338,22 @@ $(document).ready(function () {
     //     }
     // });
 
-    // Ukraine pop-up
-    // $(".show_popup").click(function (e) {
-    //     e.preventDefault();
-    //     var popup_id = $("#" + $(this).attr("rel"));
-    //     $(popup_id).css({
-    //         opacity: "1",
-    //         visibility: "visible",
-    //     });
-    //     $(".overlay_popup").css({
-    //         opacity: "1",
-    //         visibility: "visible",
-    //     });
-    //     $("body").addClass("lock");
-    // });
-    // start project pop-up
+    // Ukraine pop-up =========================================================
+    $(".show_popup").click(function (e) {
+        e.preventDefault();
+        var popup_id = $("#" + $(this).attr("rel"));
+        $(popup_id).css({
+            opacity: "1",
+            visibility: "visible",
+        });
+        $(".overlay_popup").css({
+            opacity: "1",
+            visibility: "visible",
+        });
+        $("body").addClass("lock");
+    });
 
+    // start project pop-up ===================================================
     // $(".show_popup__form").click(function (e) {
     //     e.preventDefault();
     //     let nameProject = $("#name").val();
@@ -350,7 +376,7 @@ $(document).ready(function () {
     //     }
     // });
 
-    // pop-up close actions
+    // pop-up close actions ================================================
     $(".overlay_popup").click(function () {
         $(".overlay_popup, .popup").css({
             opacity: "0",
@@ -366,7 +392,7 @@ $(document).ready(function () {
         $("body").removeClass("lock");
     });
 
-    // socials actions
+    // socials actions ==========================================================
     $("#side-button-right").mouseenter(function () {
         $(".social-icons").css({
             right: "-4px",
@@ -403,17 +429,9 @@ $(document).ready(function () {
     //         $("#require-name").hide();
     //     }
     // });
-
-    // burger
-    $(".header__burger, .burger-menu_overlay").click(function (e) {
-        e.preventDefault();
-        $(".header__burger, .header__nav, .burger-menu_overlay").toggleClass(
-            "active"
-        );
-        $("body").toggleClass("lock");
-    });
 });
 
+// анімація при скролі до елемента =============================================================================
 const animItems = document.querySelectorAll("._anim-items");
 
 if (animItems.length > 0) {
@@ -458,6 +476,8 @@ if (animItems.length > 0) {
 }
 ("use strict");
 
+// форма без капчі ======================================================================================
+
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("start-project-form");
     form.addEventListener("submit", formSend);
@@ -467,35 +487,73 @@ document.addEventListener("DOMContentLoaded", function () {
         let error = formValidate(form);
 
         let formData = new FormData(form);
-        console.log(formData);
         if (error === 0) {
             $(".page-contacts").addClass("_sending");
-            let response = await fetch("sendmail.php", {
-                method: "POST",
-                body: formData,
-                headers: {
-                    Accept: "application/json, text/plain, */*",
-                    "Content-Type": "application/json",
-                },
-            });
-            console.log("response", response);
 
-            if (response.ok) {
-                let result = await response.json();
-                console.log("res-msg", result.message);
-                console.log("res", result);
-                form.reset();
-                $(".page-contacts").removeClass("_sending");
-            } else {
-                console.log("Помилка");
-                $(".page-contacts").removeClass("_sending");
-            }
+            // тут перевірка на бота
+            let tk = "";
+            grecaptcha.ready(function () {
+                grecaptcha
+                    .execute("6LcrEbwiAAAAAEb0f4mfQIBCYtL79cAYE8xtyu9w", {
+                        action: "homepage",
+                    })
+                    .then(function (token) {
+                        tk = token;
+                        document.getElementById("token").value = token;
+                        const data = new URLSearchParams();
+                        for (const pair of new FormData(
+                            document.querySelector("#start-project-form")
+                        )) {
+                            data.append(pair[0], pair[1]);
+                        }
+                        fetch("send.php", {
+                            method: "post",
+                            body: data,
+                        })
+                            .then((response) => response.json())
+                            .then(async (result) => {
+                                if (result["om_score"] >= 0.5) {
+                                    console.log("Людина");
+                                    let response = await fetch("sendmail.php", {
+                                        method: "POST",
+                                        body: formData,
+                                    });
+
+                                    if (response.ok) {
+                                        let result = await response.json();
+                                        console.log(result.message);
+                                        form.reset();
+                                        $(".page-contacts").removeClass(
+                                            "_sending"
+                                        );
+                                        // тут вставити поп ап з донейшнс
+
+                                        $("#popup2").css({
+                                            opacity: "1",
+                                            visibility: "visible",
+                                        });
+                                        $(".overlay_popup").css({
+                                            opacity: "1",
+                                            visibility: "visible",
+                                        });
+                                        $("body").addClass("lock");
+                                    } else {
+                                        console.log("Помилка");
+                                        $(".page-contacts").removeClass(
+                                            "_sending"
+                                        );
+                                    }
+                                } else {
+                                    console.log("Бот");
+                                }
+                            });
+                    });
+            });
         } else {
             console.log("Fill required inputs");
         }
         function formValidate(form) {
             let error = 0;
-            console.log(error);
             let formReq = document.querySelectorAll("._req");
             for (let index = 0; index < formReq.length; index++) {
                 const input = formReq[index];
@@ -532,3 +590,40 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
+
+// капча =========================================================================================================
+
+// document.querySelector(".form").addEventListener("submit", (e) => {
+//     e.preventDefault();
+//     let tk = "";
+//     grecaptcha.ready(function () {
+//         grecaptcha
+//             .execute("6LcrEbwiAAAAAEb0f4mfQIBCYtL79cAYE8xtyu9w", {
+//                 action: "homepage",
+//             })
+//             .then(function (token) {
+//                 tk = token;
+//                 document.getElementById("token").value = token;
+//                 const data = new URLSearchParams();
+//                 for (const pair of new FormData(
+//                     document.querySelector("form")
+//                 )) {
+//                     data.append(pair[0], pair[1]);
+//                 }
+//                 fetch("send.php", {
+//                     method: "post",
+//                     body: data,
+//                 })
+//                     .then((response) => response.json())
+//                     .then((result) => {
+//                         if (result["om_score"] >= 0.5) {
+//                             console.log("Гомосапіенс");
+//                             console.log(data);
+//                             sendForm();
+//                         } else {
+//                             console.log("Бот");
+//                         }
+//                     });
+//             });
+//     });
+// });
