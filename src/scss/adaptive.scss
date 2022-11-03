@@ -48,11 +48,11 @@
         margin-bottom: 210px;
     }
     .logo-main-wrapper {
-        width: 340px !important;
+        width: 340px;
     }
 
     .page-hero .block-hero__offer h1 {
-        font-size: 90px;
+        font-size: 100px;
         line-height: 90%;
     }
     .page-hero .block-hero__offer .offer-solutions {
@@ -133,7 +133,7 @@
 }
 @media (max-width: 850px) and (min-width: 601px) {
     .logo-main-wrapper {
-        width: 340px !important;
+        width: 340px;
     }
     .header {
         .container {
@@ -145,7 +145,7 @@
         margin-bottom: 160px;
     }
     .page-hero .block-hero__offer h1 {
-        font-size: 70px;
+        font-size: 80px;
         line-height: 90%;
     }
     .page-hero .block-hero__offer .offer-solutions {
@@ -155,16 +155,23 @@
         flex-direction: column;
         gap: 12px;
     }
+    .page-services {
+        margin-bottom: 110px;
+    }
     .page-services .block-desc {
         flex-direction: column;
         p {
             margin-top: 30px;
         }
     }
-    .page-feedbacks .block-feedback {
-        flex-direction: column;
-        p {
-            margin-top: 30px;
+    .page-feedbacks {
+        margin-bottom: 109px;
+        .block-feedback {
+            flex-direction: column;
+            margin-bottom: 59px;
+            p {
+                margin-top: 30px;
+            }
         }
     }
     .page-feedbacks .block-slider h3 {
@@ -182,10 +189,13 @@
     .page-projects .block-projects-desc-card__img {
         width: 87vw;
     }
-    .page-partners .block-coop {
-        flex-direction: column;
-        p {
-            margin-top: 30px;
+    .page-partners {
+        margin-bottom: 69px;
+        .block-coop {
+            flex-direction: column;
+            p {
+                margin-top: 30px;
+            }
         }
     }
     .page-technologies .block-tech {
@@ -259,7 +269,7 @@
         }
     }
     .page-hero .block-hero__offer h1 {
-        font-size: 80px;
+        font-size: 100px;
         line-height: 90%;
     }
     .page-hero .block-hero__offer .offer-solutions {

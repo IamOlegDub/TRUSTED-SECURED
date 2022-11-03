@@ -218,10 +218,10 @@
             order: -1;
             &__icon {
                 overflow: hidden;
-                width: 166.16px;
-                height: 35.05px;
+
                 img {
-                    max-width: 100%;
+                    width: 166.16px;
+                    height: 35.05px;
                     display: block;
                 }
             }
@@ -401,10 +401,12 @@
     .page {
         max-width: 600px;
         margin: 0 auto;
+        padding-left: 0;
+        padding-right: 0;
         .wrap {
-            max-width: 536px;
+            // max-width: 536px;
             margin: 0 auto;
-            padding: 0 10px;
+            padding: 0 32px;
         }
     }
     .header {
@@ -426,7 +428,7 @@
 
     .page-hero {
         padding-top: 67.05px;
-        margin-bottom: 100px !important;
+        margin-bottom: 100px;
         .block-hero {
             flex-direction: column;
             margin-bottom: 0;
@@ -485,7 +487,9 @@
     }
 
     .page-feedbacks {
-        padding-bottom: 95px !important;
+        padding-bottom: 25px;
+        padding-top: 50px;
+
         .block-feedback {
             flex-direction: column;
             margin-bottom: 39px;
@@ -564,7 +568,7 @@
     }
 
     .page-projects {
-        padding-bottom: 98px !important;
+        padding-bottom: 98px;
         .block-projects {
             flex-direction: column;
             margin-bottom: 48px;
@@ -922,6 +926,8 @@
     }
 
     .page-contacts {
+        padding-top: 50px;
+        padding-bottom: 50px;
         .block-contacts-title {
             flex-direction: column;
             margin-bottom: 37px;
@@ -937,7 +943,8 @@
         .block-contacts {
             display: flex;
             flex-direction: column;
-            margin-bottom: 105px !important;
+            margin-bottom: 0px !important;
+
             &__address {
                 order: 2;
                 margin-top: 43px;
@@ -995,12 +1002,11 @@
     }
     .footer {
         height: auto;
-        margin-top: 103px;
         padding: 46px 0;
         .footer-container {
-            max-width: 536px;
+            // max-width: 536px;
             margin: 0 auto;
-            padding: 0 10px;
+            padding: 0 32px;
             .footer-row1 {
                 display: flex;
                 flex-direction: column;
@@ -1036,7 +1042,7 @@
                         }
                     }
                     &__last {
-                        width: 30%;
+                        width: 33%;
                     }
                 }
                 .footer__column__center {
@@ -1051,6 +1057,12 @@
     }
 }
 @media (max-width: 560px) and (min-width: 361px) {
+    .page .wrap {
+        padding: 0 16px;
+    }
+    .header .container {
+        padding: 0 16px !important;
+    }
     .footer .footer-container .footer-row1 .footer__column__last {
         width: 100%;
     }
@@ -1082,6 +1094,9 @@
     }
     .start-project-popup .desc {
         padding: 24px 38px;
+    }
+    .footer .footer-container {
+        padding: 0 16px;
     }
 }
 

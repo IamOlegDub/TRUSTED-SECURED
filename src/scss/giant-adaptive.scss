@@ -1,13 +1,12 @@
 @media (min-width: 1441px) {
     .header {
-        max-width: 1800px;
+        max-width: 100%;
         .container {
             max-width: 1580px;
         }
     }
     .page {
-        max-width: 1800px;
-        margin: 0 auto;
+        max-width: 100%;
         .wrap {
             max-width: 1580px;
             margin: 0 auto;
@@ -18,16 +17,19 @@
         width: 582px;
     }
     .page-hero .block-hero__offer h1 {
-        font-size: 145px;
+        font-size: 160px;
     }
     .page-hero .block-hero__offer .offer-solutions {
         font-size: 99px;
+    }
+    .page-hero .block-hero .logo-main-wrapper {
+        align-items: flex-start;
     }
     .page-services .block-services__list ul li h3 {
         font-size: 46px;
     }
     .footer .footer-container {
-        max-width: 1580px;
+        max-width: 1560px;
         padding-left: 120px;
         padding-right: 120px;
     }
@@ -42,5 +44,30 @@
     }
     .page-technologies .block-slider__center-mode .slick-arrow.slick-next {
         right: 2px;
+    }
+}
+@media (min-width: 1500px) {
+    .page-hero .block-hero__offer h1 {
+        font-size: 170px;
+    }
+}
+@media (min-width: 1550px) {
+    .page-hero .block-hero__offer h1 {
+        font-size: 180px;
+    }
+}
+@media (min-width: 1600px) {
+    .page-hero .block-hero__offer h1 {
+        font-size: 185px;
+    }
+}
+@media (min-width: 1700px) {
+    .page-hero .block-hero__offer h1 {
+        font-size: 200px;
+    }
+}
+@media (min-width: 1800px) {
+    .page-hero .block-hero__offer h1 {
+        font-size: 215px;
     }
 }

@@ -53,24 +53,24 @@ $(document).ready(function () {
         );
         $("body").removeClass("lock");
     });
-    $("#link-to-projects").click(function (e) {
-        if ($(location)[0].href === currUrl) {
-            e.preventDefault();
-            $("html, body").animate(
-                {
-                    scrollTop: $("#projects").offset().top - 72,
-                },
-                1000
-            );
-        } else {
-            e.preventDefault();
-            $(location).attr("href", "/#projects");
-        }
-        $(".header__burger, .header__nav, .burger-menu_overlay").removeClass(
-            "active"
-        );
-        $("body").removeClass("lock");
-    });
+    // $("#link-to-projects").click(function (e) {
+    //     if ($(location)[0].href === currUrl) {
+    //         e.preventDefault();
+    //         $("html, body").animate(
+    //             {
+    //                 scrollTop: $("#projects").offset().top - 72,
+    //             },
+    //             1000
+    //         );
+    //     } else {
+    //         e.preventDefault();
+    //         $(location).attr("href", "/#projects");
+    //     }
+    //     $(".header__burger, .header__nav, .burger-menu_overlay").removeClass(
+    //         "active"
+    //     );
+    //     $("body").removeClass("lock");
+    // });
 
     $("#link-to-contacts, #get-in-touch, #start-project").click(function (e) {
         if ($(location)[0].href === currUrl) {
@@ -111,6 +111,12 @@ $(document).ready(function () {
             $("body").removeClass("lock");
         }
     );
+    $("#link-to-project-page").click(function () {
+        $(location).attr("href", "/project.html");
+    });
+    $("#link-to-projects").click(function () {
+        $(location).attr("href", "/project-list.html");
+    });
 
     history.pushState("", document.title, window.location.pathname);
 
@@ -189,7 +195,7 @@ $(document).ready(function () {
     });
     $(".absolute .block-slider__center-mode").slick({
         dots: true,
-        infinite: false,
+        infinite: true,
         // centerMode: true,
         variableWidth: true,
         slidesToScroll: 3,

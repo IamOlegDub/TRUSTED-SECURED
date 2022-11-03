@@ -3,7 +3,12 @@
     @@include('html/head.html', {})
     <body>
         @@include('html/header.html', {})
-
+        <div class="block-social">
+            <a class="side-buttons" id="side-button-right" href="">
+                <span>Our Socials</span>
+            </a>
+        </div>
+        @@include('html/social-hover.html', {})
         <main>
             <div class="page page-privacy">
                 <div class="wrap">
@@ -185,8 +190,8 @@
                 </div>
             </div>
         </main>
-
-        @@include('html/footer.html', {})
+        @@include('html/Ukraine-popup.html', {}) @@include('html/footer.html',
+        {})
         <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/jquery.marquee/1.4.0/jquery.marquee.min.js"></script>
         <script type="text/javascript" src="js/slick.min.js"></script>

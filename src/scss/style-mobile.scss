@@ -31,7 +31,7 @@
         max-width: 360px;
         margin: 0 auto;
         .container {
-            max-width: 328px;
+            // max-width: 328px;
             margin: 0 auto;
             padding: 0 16px;
         }
@@ -40,9 +40,9 @@
         max-width: 360px;
         margin: 0 auto;
         .wrap {
-            max-width: 328px;
+            // max-width: 328px;
             margin: 0 auto;
-            padding: 0 10px;
+            padding: 0 16px;
         }
     }
 
@@ -73,7 +73,7 @@
     }
 
     .page-hero {
-        padding-bottom: 100px !important;
+        padding-bottom: 10px;
         .block-hero__buttons {
             flex-direction: column;
             gap: 14px;
@@ -96,9 +96,13 @@
         .block-desc p {
             max-width: 90%;
         }
+        .block-services__list ul li h3 {
+            font-size: 24px;
+        }
         .block-services__slider-wrapper.tablet-visible {
             width: 100%;
         }
+        margin-bottom: 0 !important;
     }
 
     .page-feedbacks {
@@ -113,6 +117,8 @@
                 right: 135px;
             }
         }
+        margin-bottom: 0 !important;
+        padding-bottom: 0px;
     }
 
     .page-projects {
@@ -158,6 +164,7 @@
                 }
             }
         }
+        margin-bottom: 0 !important;
     }
 
     .page-partners {
@@ -183,6 +190,7 @@
                 right: 135px;
             }
         }
+        margin-bottom: 0 !important;
     }
 
     .page-technologies {
@@ -233,10 +241,13 @@
             .block-tech__slider__cards__card__img::after {
             background-size: 115% !important;
         }
+        margin-bottom: 0 !important;
     }
 
     .page-contacts {
+        padding-bottom: 50px;
         .block-contacts {
+            margin-bottom: 0px !important;
             &__maps {
                 order: 3;
                 margin-top: 16px;
@@ -267,12 +278,11 @@
 
     .footer {
         height: auto;
-        margin-top: 103px;
         padding: 46px 0;
         .footer-container {
-            max-width: 328px;
+            // max-width: 328px;
             margin: 0 auto;
-            padding: 0 10px;
+            padding: 0 16px;
             .footer-row1 {
                 .footer__column {
                     p {
@@ -371,5 +381,8 @@
             .block-tech__slider__cards__card__img::after {
             background-size: 120% !important;
         }
+    }
+    .footer .footer-container {
+        padding: 0 16px;
     }
 }
