@@ -1,0 +1,28 @@
+.page.page-hero.page-project-hero.page-project-list-hero {
+    margin-bottom: 82px;
+    @media (min-width: 1500px) {
+        margin-bottom: 100px;
+    }
+    @media (min-width: 1600px) {
+        margin-bottom: 115px;
+    }
+    @media (min-width: 1700px) {
+        margin-bottom: 130px;
+    }
+    @media (min-width: 1800px) {
+        margin-bottom: 150px;
+    }
+    @media (max-width: 850px) {
+        margin-bottom: 0px;
+    }
+    .logo-main-wrapper.project-list.proj {
+        img {
+            width: 100%;
+            object-fit: cover;
+            overflow: hidden;
+            @media (max-width: 1400px) and (min-width: 851px) {
+                height: 80%;
+            }
+        }
+    }
+}

@@ -188,7 +188,7 @@ ol {
         z-index: 1000;
         left: 0;
         right: 0;
-        top: 76vh;
+        bottom: 0;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -312,8 +312,9 @@ p {
             }
         }
         &__list-item {
+            position: relative;
             cursor: pointer;
-            &:hover {
+            &:hover:not(:last-child) {
                 @media (min-width: 601px) {
                     @include gradient;
                 }
@@ -378,6 +379,112 @@ p {
     }
     .support-button {
         display: none;
+    }
+    .desktop__open {
+        .desktop__open__list {
+            display: none;
+        }
+        @media (min-width: 851px) {
+            &:hover {
+                .desktop__open__list {
+                    position: absolute;
+                    top: 15px;
+                    left: -95px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0;
+
+                    li {
+                        transition: all 0.3s ease-out 1ms;
+
+                        &:first-child {
+                            opacity: 0;
+                            visibility: hidden;
+                        }
+                        &:nth-child(2) {
+                            border-top-left-radius: 4px;
+                            border-top-right-radius: 4px;
+                        }
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        padding: 9px 24px;
+                        width: 222px;
+                        background: #f5f5f5;
+                        border-bottom: 1px solid $black-light;
+                        transition: all 0.3s ease-out 1ms;
+
+                        &:last-child {
+                            border-bottom: 0px;
+                            border-bottom-left-radius: 4px;
+                            border-bottom-right-radius: 4px;
+                        }
+                        transition: all 0.3s ease-out 1ms;
+
+                        span {
+                            transition: all 0.3s ease-out 1ms;
+
+                            &::before {
+                                opacity: 0;
+                                visibility: hidden;
+                                transition: all 0.3s ease-out 1ms;
+
+                                content: "";
+                                position: absolute;
+                                display: block;
+                                width: 8px;
+                                height: 8px;
+                                top: 15px;
+                                left: 6px;
+                                border-radius: 50%;
+                                transition: all 0.3s ease-out 1ms;
+                            }
+                        }
+                        &:hover {
+                            @include gradient;
+                            position: relative;
+                            transition: all 0.3s ease-out 1ms;
+
+                            span {
+                                transition: all 0.3s ease-out 1ms;
+                                padding-left: 15px;
+                                padding-right: 15px;
+                                &::before {
+                                    transition: all 0.3s ease-out 1ms;
+                                    opacity: 1;
+                                    visibility: visible;
+                                    content: "";
+                                    position: absolute;
+                                    display: block;
+                                    width: 8px;
+                                    height: 8px;
+                                    top: 15px;
+                                    left: 23px;
+                                    background: linear-gradient(
+                                        90deg,
+                                        #f72f16 0%,
+                                        #9422d1 100%
+                                    );
+                                    border-radius: 50%;
+                                }
+                            }
+                        }
+                    }
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        display: block;
+                        width: 16px;
+                        height: 16px;
+                        left: 36px;
+                        top: 10px;
+                        z-index: -1;
+                        background: #f5f5f5;
+                        transform: rotate(-135deg);
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -587,6 +694,7 @@ p {
 
 .page-services {
     margin-bottom: 65px;
+
     .block-desc {
         @include block-title;
     }
@@ -594,9 +702,8 @@ p {
     .block-services {
         display: flex;
         justify-content: space-between;
+        gap: 20px;
         &__list {
-            flex-basis: 48%;
-
             ul {
                 li {
                     padding-right: 20px;
@@ -609,6 +716,7 @@ p {
                         text-transform: uppercase;
                         color: rgba(13, 13, 13, 0.4);
                         padding: 1.02rem 0;
+                        transition: all 0.8s ease-out 1ms;
 
                         &:hover {
                             @include gradient;
@@ -618,23 +726,45 @@ p {
                         }
                     }
                 }
+                button {
+                    @include outlined-button;
+                }
             }
         }
         &__desc {
-            flex-basis: 48%;
+            max-width: 54%;
             &__service {
                 display: none;
+                visibility: hidden;
+                opacity: 0;
+                transition: all 0.8s ease-out 1ms;
+
                 &__img {
                     img {
-                        width: 100%;
-                        height: auto;
+                        // width: 100%;
+                        // height: auto;
+                    }
+                }
+                &__info {
+                    max-width: 60%;
+                    button {
+                        @include outlined-button;
                     }
                 }
             }
             &__service.active {
-                display: block;
+                transition: all 0.8s ease-out 1ms;
+
+                display: flex;
+                visibility: visible;
+
+                opacity: 1;
+                flex-direction: row-reverse;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 27px;
                 .block-services__text {
-                    margin-top: 28px;
+                    margin-top: 25px;
                     h4 {
                         font-size: 26px;
                         line-height: 130%;
@@ -647,14 +777,15 @@ p {
                         line-height: 140%;
                         color: $black;
                         margin-top: 24px;
-                        margin-bottom: 10px;
+                        margin-bottom: 7px;
                     }
                 }
             }
         }
         &__slider-wrapper {
-            width: 584px;
+            width: 100%;
             overflow: hidden;
+            margin-bottom: 18px;
             .auto-slider {
                 margin-top: 5px;
                 &__element {
@@ -1268,6 +1399,11 @@ p {
 .page-contacts {
     padding-top: 100px;
     padding-bottom: 100px;
+    &.colored {
+        @media (min-width: 851px) {
+            background-color: $background;
+        }
+    }
     &::after {
         content: "";
         position: fixed;
@@ -1378,6 +1514,11 @@ p {
                     } /* Firefox 18- */
                     &:-ms-input-placeholder {
                         color: $ph;
+                    }
+                }
+                @media (min-width: 851px) {
+                    .colored {
+                        background-color: $background;
                     }
                 }
                 span {
@@ -1767,6 +1908,7 @@ p {
 @import "privacy-style";
 @import "project-style";
 @import "project-list-style";
+@import "our-contacts";
 @import "adaptive";
 @import "style-tab";
 @import "style-mobile";

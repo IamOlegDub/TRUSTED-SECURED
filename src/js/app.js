@@ -31,6 +31,10 @@ $(document).ready(function () {
         }
     });
 
+    // $(".desktop__open").hover(
+    //     $(this).find(".desktop__open__list").stop().slideToggle(300)
+    // );
+
     // переходи по сторінці і сторінках ================================================
 
     const currUrl = `${location.protocol}//${window.location.host}/`;
@@ -72,7 +76,7 @@ $(document).ready(function () {
     //     $("body").removeClass("lock");
     // });
 
-    $("#link-to-contacts, #get-in-touch, #start-project").click(function (e) {
+    $("#get-in-touch, #start-project").click(function (e) {
         if ($(location)[0].href === currUrl) {
             e.preventDefault();
             $("html, body").animate(
@@ -116,6 +120,9 @@ $(document).ready(function () {
     });
     $("#link-to-projects").click(function () {
         $(location).attr("href", "/project-list.html");
+    });
+    $("#link-to-contacts").click(function () {
+        $(location).attr("href", "/our-contacts.html");
     });
 
     history.pushState("", document.title, window.location.pathname);
@@ -167,6 +174,12 @@ $(document).ready(function () {
                 $(this).remove();
             });
     });
+
+    if (window.location.pathname == "/our-contacts.html") {
+        $(".page-contacts, .form-name, .form-email, .input-comment").addClass(
+            "colored"
+        );
+    }
 
     // sliders ==================================================================
 
@@ -257,9 +270,9 @@ $(document).ready(function () {
         $(".block-services__slider-wrapper.tablet-visible").removeClass(
             "active"
         );
-        $("#block-services__desc-2").addClass("active");
-        $("#block-services__desc__tablet-2").addClass("active");
-        $("#block-services__auto-slider__2").addClass("active");
+        $("#block-services__desc-2").addClass("active", 2000);
+        $("#block-services__desc__tablet-2").addClass("active", 2000);
+        $("#block-services__auto-slider__2").addClass("active", 2000);
     });
     $("#block-services__list-3").click(function () {
         $(".block-services div").removeClass("active");

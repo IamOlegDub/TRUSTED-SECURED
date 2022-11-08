@@ -35,6 +35,9 @@
         .container {
             padding: 0 60px;
         }
+        .desktop__open:hover .desktop__open__list {
+            left: -47px;
+        }
     }
     // .header__nav__right__contacts {
     //     margin-right: 50px;

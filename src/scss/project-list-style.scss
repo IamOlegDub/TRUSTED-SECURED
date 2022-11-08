@@ -5,20 +5,35 @@
         margin-bottom: 0;
         .project-list-hero__offer {
             h1 {
-                @media (mшт-width: 1700px) {
-                    font-size: 205px;
+                @media (min-width: 1441px) {
+                    font-size: 150px;
+                    &.offer-solutions {
+                        font-size: 110px;
+                    }
                 }
-                @media (mшт-width: 1441px) {
-                    font-size: 160px;
+                @media (min-width: 1700px) {
+                    font-size: 190px;
+                    &.offer-solutions {
+                        font-size: 130px;
+                    }
                 }
                 @media (max-width: 1250px) and (min-width: 991px) {
                     font-size: 100px;
+                    &.offer-solutions {
+                        font-size: 70px;
+                    }
                 }
                 @media (max-width: 990px) and (min-width: 891px) {
                     font-size: 80px;
+                    &.offer-solutions {
+                        font-size: 60px;
+                    }
                 }
                 @media (max-width: 890px) and (min-width: 601px) {
                     font-size: 70px;
+                    &.offer-solutions {
+                        font-size: 50px;
+                    }
                 }
             }
         }
