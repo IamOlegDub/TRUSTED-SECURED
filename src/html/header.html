@@ -23,11 +23,15 @@
                     >
                         <ul class="desktop__open__list">
                             <li></li>
-                            <li><span>company</span></li>
-                            <li><span>our team</span></li>
-                            <li><span>How We Work</span></li>
-                            <li><span>Our Technologies</span></li>
-                            <li><span>Vacancies</span></li>
+                            <!-- <li><span>company</span></li> -->
+                            <li id="link-to-our-team"><span>our team</span></li>
+                            <li id="link-to-how-we-work">
+                                <span>How We Work</span>
+                            </li>
+
+                            <li id="link-to-vacancies">
+                                <span>Vacancies</span>
+                            </li>
                         </ul>
                         <span
                             class="burger__open__toggler desktop__open__toggler"
@@ -46,8 +50,19 @@
                         ></span>
 
                         <ul class="burger__open__list">
-                            <li class="drop-list">Company</li>
-                            <li class="drop-list">team</li>
+                            <li id="burger-link-to-our-team" class="drop-list">
+                                our team
+                            </li>
+                            <li
+                                id="burger-link-to-how-we-work"
+                                class="drop-list"
+                            >
+                                how we work
+                            </li>
+
+                            <li id="burger-link-to-vacancies" class="drop-list">
+                                vacancies
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -66,13 +81,13 @@
                         class="header__nav__right__contacts header__nav__list-item"
                         id="link-to-contacts"
                     >
-                        <span>Contacts</span>
+                        <span>Contact&nbspus</span>
                     </li>
                     <li>
                         <div class="language-select">
                             <div class="language-option active" data-lang="en">
                                 <span>en</span>
-                                <span>
+                                <!-- <span>
                                     <img
                                         class="language-arrow__down"
                                         src="@img/keyboard_arrow_down.svg"
@@ -88,9 +103,9 @@
                                         src="@img/keyboard_arrow_down_hover.svg"
                                         alt=""
                                     />
-                                </span>
+                                </span> -->
                             </div>
-                            <div class="language-option" data-lang="ua">
+                            <!-- <div class="language-option" data-lang="ua">
                                 <span>ua</span>
                                 <span>
                                     <img
@@ -109,7 +124,7 @@
                                         alt=""
                                     />
                                 </span>
-                            </div>
+                            </div> -->
                         </div>
                     </li>
                     <li class="burger-support">

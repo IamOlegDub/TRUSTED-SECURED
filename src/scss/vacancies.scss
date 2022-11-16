@@ -1,0 +1,190 @@
+.page.page-hero.page-project-hero.page-project-list-hero.page-our-contacts.page-how-we-work.page-vacancies {
+    padding-bottom: 50px;
+}
+.page.page-projects.page-project-list-projects.page-vacancies-slider-mobile {
+    display: none;
+    @media (max-width: 600px) {
+        padding-bottom: 0;
+    }
+}
+.page.page-projects.page-project-list-projects.page-vacancies-slider-desk {
+    padding-top: 50px;
+    background-color: $background;
+    margin-bottom: 0;
+    padding-bottom: 50px;
+
+    @include slider-vacancies;
+    .block-slider-vacancies {
+        .slide-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 144px;
+            @media (max-width: 1200px) {
+                gap: 50px;
+            }
+            .vacancies-card {
+                display: flex;
+                gap: 50px;
+                margin-top: 34px;
+                .vacancies-img {
+                    margin: 0 auto;
+                    margin-top: 15px;
+                }
+                .vacancies-info {
+                    flex-basis: 45%;
+                    button {
+                        box-shadow: 2px 1000px 4px 4px $background inset;
+                    }
+                    .vacancies-list {
+                        width: 80%;
+                        @media (max-width: 1395px) {
+                            width: 100%;
+                        }
+                    }
+                }
+                &.reverse {
+                    flex-direction: row-reverse;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .page.page-projects.page-project-list-projects.page-vacancies-slider-desk {
+        display: none;
+    }
+    .page.page-projects.page-project-list-projects.page-vacancies-slider-mobile {
+        display: block;
+        background-color: $background;
+        @include slider-vacancies-mobile;
+
+        .block-slider-vacancies-mobile {
+            padding-top: 80px;
+            .slick-arrow {
+                &:hover {
+                    -webkit-user-select: none;
+                    -webkit-touch-callout: none;
+                }
+                &:active {
+                    background: linear-gradient(
+                        90deg,
+                        #f72f16 0%,
+                        #9422d1 100%
+                    );
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+            .slick-arrow.slick-prev {
+                &:hover::before {
+                    content: url("/img/keyboard_arrow_left.svg");
+                }
+                &::before {
+                    content: url("/img/keyboard_arrow_left.svg");
+                    margin-right: 16px;
+                }
+                &:active::before {
+                    content: url("/img/keyboard_arrow_left_hover.svg");
+                }
+            }
+            .slick-arrow.slick-next {
+                right: 2px;
+                &:hover::after {
+                    content: url("/img/keyboard_arrow_right.svg");
+                }
+                &::after {
+                    content: url("/img/keyboard_arrow_right.svg");
+                    margin-left: 16px;
+                }
+                &:active::after {
+                    content: url("/img/keyboard_arrow_right_hover.svg");
+                }
+            }
+            h3 {
+                font-weight: 900;
+                font-size: 24px;
+                line-height: 120%;
+                letter-spacing: 0.015em;
+                margin-top: 15px;
+            }
+            .vacancies-card {
+                .vacancies-img {
+                    max-width: none;
+                }
+                .vacancies-info {
+                    button {
+                        box-shadow: 2px 1000px 4px 4px $background inset;
+                    }
+                }
+            }
+            .slick-slide {
+                margin: 0 2px;
+            }
+        }
+    }
+}
+.page.page-contacts.contacts.vacancies-contacts {
+    padding-top: 50px;
+    .vacancies-title {
+        max-width: 65%;
+        @media (max-width: 1230px) {
+            max-width: 800%;
+            h4 {
+                width: 70%;
+            }
+        }
+        &__btn {
+            a {
+                @include filled-button;
+                outline: none;
+                border: none;
+            }
+        }
+        h4 {
+            margin-bottom: 20px;
+            width: 70%;
+            @media (max-width: 1600px) {
+                width: 80%;
+            }
+            @media (max-width: 1500px) {
+                width: 90%;
+            }
+            @media (max-width: 1370px) {
+                width: 100%;
+            }
+            @media (max-width: 1230px) {
+                width: 60%;
+            }
+            @media (max-width: 910px) {
+                width: 70%;
+            }
+        }
+    }
+    @media (max-width: 850px) {
+        .vacancies-title {
+            h2 {
+                font-weight: 900;
+                font-size: 30px;
+                line-height: 110%;
+            }
+            h4 {
+                font-weight: 900;
+                font-size: 26px;
+                line-height: 130%;
+                width: 100%;
+            }
+        }
+    }
+    @media (max-width: 450px) {
+        .vacancies-title {
+            h4 {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 140%;
+                text-transform: none;
+                margin-bottom: 50px;
+            }
+        }
+    }
+}

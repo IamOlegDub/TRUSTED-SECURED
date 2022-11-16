@@ -30,6 +30,19 @@
         $body.='<p><strong>Comment:</strong> '.$_POST['comment'].'</p>';
     }
 
+    // додаємо файл
+
+    if(!empty($_FILES['application']['tmp_name'])) {
+        // шлях завантаженян файла
+        $filePath = __DIR__ . "/files/" . $_FILES['application']['name'];
+        // завантажуємо файл
+        if (copy($_FILES['application']['tmp_name'], $filePath)) {
+            $fileAttach = $filePath;
+            $body.='<p><strong>Резюме в додатку</strong></p>';
+            $mail->addAttachment($fileAttach);
+        }
+    }
+
     $mail->Body = $body;
 
     // Відпарвка

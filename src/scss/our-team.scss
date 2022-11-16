@@ -1,0 +1,407 @@
+.page.page-hero.page-project-hero.page-project-list-hero.page-our-contacts.page-how-we-work.page-vacancies.our-team__hero {
+    padding-bottom: 40px;
+    .block-hero {
+        .logo-main-wrapper.project-list {
+            padding-top: 20px;
+            @media (max-width: 850px) {
+                padding-top: 60px;
+            }
+            @media (max-width: 768px) {
+                padding-top: 170px;
+                overflow: visible;
+            }
+            @media (max-width: 600px) {
+                padding-top: 100px;
+            }
+            @media (max-width: 415px) {
+                padding-top: 50px;
+            }
+            img {
+                height: auto;
+                width: 100%;
+            }
+        }
+    }
+}
+.page-our-team {
+    background-color: $background;
+    padding-top: 60px;
+    padding-bottom: 10px;
+    transition: all 0.3s ease-out 1ms;
+
+    .block-our-team-title {
+        @include block-title;
+        margin-bottom: 110px;
+        @media (max-width: 1000px) {
+            flex-direction: column;
+            margin-bottom: 80px;
+        }
+        h2 {
+            flex-basis: 55%;
+            @media (max-width: 850px) {
+                font-weight: 900;
+                font-size: 30px;
+                line-height: 110%;
+            }
+            &.thin {
+                display: none;
+            }
+            @media (max-width: 1300px) {
+                &.thin {
+                    display: block;
+                }
+                &.wide {
+                    display: none;
+                }
+            }
+            @media (max-width: 850px) {
+                &.thin {
+                    display: none;
+                }
+                &.wide {
+                    display: block;
+                }
+            }
+        }
+        p {
+            padding-left: 15px;
+            margin-top: 114px;
+            @media (max-width: 1000px) {
+                width: 50%;
+                margin-top: 50px;
+                padding-left: 0px;
+            }
+            @media (max-width: 850px) {
+                width: 100%;
+                margin-top: 16px;
+            }
+        }
+    }
+    @include slider-our-team;
+    .our-team__slider {
+        &-mobile {
+            display: none;
+        }
+        .slick-slide {
+            padding: 8px 6px 75px 6px;
+        }
+        &__slide {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            row-gap: 124px;
+            &__card {
+                transition: all 0.3s ease-out 1ms;
+
+                display: flex;
+                flex-basis: 48%;
+                justify-content: space-between;
+                &__img {
+                    transform: scale(1);
+                    transition: all 0.3s ease-out 1ms;
+                    width: 197px;
+                    height: 197px;
+                    object-fit: cover;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                &__info {
+                    transition: all 0.3s ease-out 1ms;
+                    position: relative;
+                    flex-basis: 60%;
+                    @media (max-width: 1320px) {
+                        flex-basis: 50%;
+                    }
+                    h4 {
+                        font-weight: 900;
+                        font-size: 26px;
+                        line-height: 130%;
+                        margin-bottom: 12px;
+                        text-transform: uppercase;
+                    }
+                    .text-gradient {
+                        @include gradient;
+                        text-transform: uppercase;
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 18px;
+                        line-height: 140%;
+                        margin-bottom: 12px;
+                    }
+
+                    p {
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 18px;
+                        line-height: 140%;
+                        margin-bottom: 12px;
+                    }
+                    .staff-socials {
+                        position: absolute;
+                        visibility: hidden;
+                        opacity: 0;
+                        left: -80px;
+                        transform: scale(0);
+                        transition: all 0.3s ease-out 1ms;
+                        .social-icons__wrapper {
+                            width: auto;
+                            height: auto;
+                        }
+                    }
+                }
+                @media (min-width: 1001px) {
+                    &:hover {
+                        z-index: 10;
+                        .our-team__slider__slide__card__img {
+                            transform: scale(1.27) translate(30px, 30px);
+                            transition: all 0.3s ease-out 1ms;
+                            position: relative;
+
+                            @media (max-width: 1300px) {
+                                transform: scale(1) translate(0);
+                            }
+                            &::after {
+                                transition: all 0.3s ease-out 1ms;
+
+                                position: absolute;
+                                content: "";
+                                top: -4px;
+                                left: -4px;
+                                width: 205px;
+                                height: 205px;
+                                background: linear-gradient(
+                                    90deg,
+                                    #f72f16 0%,
+                                    #9422d1 100%
+                                );
+                                z-index: -1;
+                            }
+                        }
+                        .our-team__slider__slide__card__info {
+                            transition: all 0.3s ease-out 1ms;
+
+                            flex-basis: 47%;
+                            @media (max-width: 1320px) {
+                                flex-basis: 46%;
+                            }
+                            @media (max-width: 1300px) {
+                                flex-basis: 50%;
+                            }
+
+                            .staff-socials {
+                                background: linear-gradient(
+                                    180deg,
+                                    #f72f16 0%,
+                                    #9422d1 100%
+                                );
+                                transition: all 0.3s ease-out 1ms;
+                                transform: scale(1);
+                                opacity: 1;
+                                visibility: visible;
+                                left: 0;
+                                display: flex;
+                                border-radius: 4px 0px 0px 4px;
+                                width: fit-content;
+                                padding: 18px 24px;
+                                gap: 28px;
+                                left: 0;
+                                @media (max-width: 1411px) {
+                                    padding: 7px 24px;
+                                }
+                            }
+                        }
+                        position: relative;
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 6px;
+                            left: 7px;
+                            right: 0;
+                            bottom: -66px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .page-our-team {
+        .our-team__slider {
+            display: none;
+        }
+        @include slider-our-team-mobile;
+
+        .our-team__slider.our-team__slider-mobile {
+            display: block;
+            .our-team__slider {
+                &__slide {
+                    &__card {
+                        justify-content: space-around;
+
+                        &__img {
+                            width: 274px;
+                            height: 274px;
+                            &::after {
+                                transition: all 0.3s ease-out 1ms;
+
+                                position: absolute;
+                                content: "";
+                                top: -4px;
+                                left: -4px;
+                                width: 282px;
+                                height: 282px;
+                                background: linear-gradient(
+                                    90deg,
+                                    #f72f16 0%,
+                                    #9422d1 100%
+                                );
+                                z-index: -1;
+                            }
+                        }
+                        &__info {
+                            position: relative;
+                            .staff-socials {
+                                background: linear-gradient(
+                                    180deg,
+                                    #f72f16 0%,
+                                    #9422d1 100%
+                                );
+                                transition: all 0.3s ease-out 1ms;
+                                transform: scale(1);
+                                opacity: 1;
+                                visibility: visible;
+                                left: 0;
+                                display: flex;
+                                border-radius: 4px 0px 0px 4px;
+                                width: fit-content;
+                                padding: 12px 40px;
+
+                                gap: 28px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .page-our-team {
+        .our-team__slider.our-team__slider-mobile {
+            .our-team__slider {
+                &__slide {
+                    &__card {
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 32px;
+                        &__info {
+                            display: flex;
+                            flex-direction: column;
+                            position: relative;
+                            align-items: center;
+                            h4 {
+                            }
+                            .text-gradient {
+                            }
+
+                            p {
+                                text-align: center;
+                            }
+                            position: relative;
+                            .staff-socials {
+                                position: static;
+                                background: linear-gradient(
+                                    180deg,
+                                    #f72f16 0%,
+                                    #9422d1 100%
+                                );
+                                transition: all 0.3s ease-out 1ms;
+                                transform: scale(1);
+                                opacity: 1;
+                                visibility: visible;
+                                left: 0;
+                                display: flex;
+                                border-radius: 4px 0px 0px 4px;
+                                width: fit-content;
+                                padding: 12px 40px;
+                                gap: 28px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 600px) {
+    .page-our-team {
+        .our-team__slider {
+            .slick-slide {
+                padding-bottom: 0;
+            }
+        }
+        .our-team__slider.our-team__slider-mobile {
+            .slick-arrow {
+                &:hover {
+                    -webkit-user-select: none;
+                    -webkit-touch-callout: none;
+                }
+                &:active {
+                    background: linear-gradient(
+                        90deg,
+                        #f72f16 0%,
+                        #9422d1 100%
+                    );
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+            .slick-arrow.slick-prev {
+                &:hover::before {
+                    content: url("/img/keyboard_arrow_left.svg");
+                }
+                &::before {
+                    content: url("/img/keyboard_arrow_left.svg");
+                    margin-right: 16px;
+                }
+                &:active::before {
+                    content: url("/img/keyboard_arrow_left_hover.svg");
+                }
+            }
+            .slick-arrow.slick-next {
+                right: 2px;
+                &:hover::after {
+                    content: url("/img/keyboard_arrow_right.svg");
+                }
+                &::after {
+                    content: url("/img/keyboard_arrow_right.svg");
+                    margin-left: 16px;
+                }
+                &:active::after {
+                    content: url("/img/keyboard_arrow_right_hover.svg");
+                }
+            }
+            .our-team__slider {
+                &__slide {
+                    &__card {
+                        &__info {
+                            align-items: flex-start;
+                            h4 {
+                            }
+                            .text-gradient {
+                            }
+
+                            p {
+                                text-align: start;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,156 @@
+<div
+    class="page page-contacts contacts vacancies-contacts vacancies-one-contacts"
+>
+    <a name="contacts" id="contacts" href=""></a>
+    <div class="wrap">
+        <div class="block-contacts-title vacancies-title _first _anim-items">
+            <h2>
+                Do you want to become <br /><span>a part of our team?</span>
+            </h2>
+            <h4>
+                Join a powerful and driven team of professionals who are making
+                real changes in the IT industry.
+            </h4>
+        </div>
+        <div class="block-contacts">
+            <div class="block-contacts__address _fourth _anim-items">
+                <h3>Lviv, Ukraine</h3>
+                <p>15 Smal-Stockogo</p>
+                <p>
+                    <a href="mailto:info@softpartners.com.ua"
+                        >info@softpartners.com.ua</a
+                    >
+                </p>
+                <p><a href="tel:+380960346906">+380960346906</a></p>
+            </div>
+            <div class="block-contacts__maps _second _anim-items">
+                <div class="block-contacts__maps__america">
+                    <img src="@img/AmericaMask.svg" class="_america" alt="" />
+                </div>
+                <div class="block-contacts__maps__eurasia">
+                    <img src="@img/EurasiaMask.svg" alt="" class="_eurasia" />
+                    <div class="block-contacts__maps__location">
+                        <img
+                            src="@img/location-icon-tablet.svg"
+                            alt=""
+                            class="location__img _third _anim-items"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="block-contacts__form">
+                <form
+                    id="send-resume-form"
+                    action="#"
+                    class="form _fourth _anim-items"
+                    rel="popup2"
+                >
+                    <div class="input-name-wrapper">
+                        <label id="label-name" class="label-name" for="name"
+                            >Name*</label
+                        >
+                        <input
+                            class="form-name _req"
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Your name..."
+                        />
+                        <span id="require-name" class="require-name"
+                            >This field is required!</span
+                        >
+                    </div>
+
+                    <label id="label-comment" for="comment">Your comment</label>
+                    <input
+                        type="text"
+                        class="input-comment"
+                        id="comment"
+                        name="comment"
+                        placeholder="Share your vision of the project..."
+                    />
+                    <p style="font-size: 10px; color: gray">
+                        This site is protected by reCAPTCHA and the Google
+                        <a
+                            style="color: gray"
+                            href="https://policies.google.com/privacy"
+                            >Privacy Policy</a
+                        >
+                        and
+                        <a
+                            style="color: gray"
+                            href="https://policies.google.com/terms"
+                            >Terms of Service</a
+                        >
+                        apply.
+                    </p>
+                    <div class="form__item">
+                        <label id="label-CV" class="form-clip" for="formCV"
+                            ><img src="@img/clip.svg" alt=""
+                        /></label>
+                        <label
+                            id="label-CV-gr"
+                            class="form-clip-gr"
+                            for="formCV"
+                            ><img src="@img/clip-gr.svg" alt=""
+                        /></label>
+                        <input
+                            accept=".doc, .docx, .pdf"
+                            class="file-input"
+                            name="formCV"
+                            id="formCV"
+                            type="file"
+                        />
+                        <div id="add-CV-btn" class="file-btn">
+                            Attach resume
+                        </div>
+                        <div id="formPreview" class="file-preview"></div>
+                        <div id="remove-CV" class="remove-CV hide-inputCV">
+                            <img
+                                class="cross black"
+                                src="@img/removeCV.svg"
+                                alt=""
+                            />
+                            <img
+                                class="cross gradient"
+                                src="@img/removeCV-gr.svg"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                    <small>Use files only *.doc, *.docx, *.pdf</small>
+                    <input type="hidden" id="token" name="token" />
+                    <div class="submit-container _fifth _anim-items">
+                        <input
+                            class="show_popup__form"
+                            id="start-project-form__button"
+                            type="submit"
+                            value="Send resume"
+                            rel="popup2"
+                        />
+                    </div>
+                </form>
+                <div class="form-result form-result__yes">
+                    <div class="form-result__img">
+                        <img src="@img/success.svg" alt="" />
+                    </div>
+                    <h4>Your resume has been <span>sent successfully</span></h4>
+                    <p>
+                        We will review your resume, if your resume meets our
+                        requirements, we will contact you.
+                    </p>
+                </div>
+                <div class="form-result form-result__no">
+                    <div class="form-result__img">
+                        <img src="@img/wrong.svg" alt="" />
+                    </div>
+                    <h4>Oops, something <span>went wrong!</span></h4>
+                    <p>
+                        Try sending your resume a little later. We think it will
+                        be successful.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

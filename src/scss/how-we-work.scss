@@ -1,0 +1,196 @@
+.page.page-hero.page-project-hero.page-project-list-hero.page-our-contacts.page-how-we-work {
+    padding-bottom: 60px;
+}
+.page__how-we-work__steps {
+    padding-bottom: 1470px;
+    @media (max-width: 1255px) {
+        padding-bottom: 1600px;
+    }
+    @media (max-width: 850px) {
+        padding-bottom: 1380px;
+    }
+    background-color: $background;
+    .block__how-we-work__steps {
+        margin-bottom: 46px;
+        p {
+            margin-top: 48px;
+        }
+    }
+    .how-we-work__steps {
+        float: right;
+        width: 40%;
+        @media (max-width: 1000px) {
+            width: 50%;
+        }
+        @media (max-width: 850px) {
+            width: 70%;
+        }
+        @media (max-width: 720px) {
+            width: 85%;
+        }
+        &__desc {
+            @media (max-width: 1360px) {
+                gap: 80px;
+                flex-basis: auto;
+            }
+            &__step {
+                &__icon {
+                    @media (max-width: 1000px) {
+                        display: block;
+                    }
+                    &.vertical-line {
+                        &::before {
+                            height: 318px;
+                            @media (max-width: 1255px) {
+                                height: 345px;
+                            }
+                            @media (max-width: 850px) {
+                                height: 318px;
+                            }
+                        }
+                    }
+                }
+                &__info {
+                    h1 {
+                        font-weight: 900;
+                        font-size: 110px;
+                        line-height: 100px;
+                        text-transform: uppercase;
+                        margin-bottom: 24px;
+                    }
+                    p {
+                        margin-top: 20px;
+                    }
+                    @media (max-width: 850px) {
+                        h1 {
+                            font-size: 60px;
+                            line-height: 60px;
+                        }
+                        p {
+                            font-weight: 500;
+                            font-size: 18px;
+                            line-height: 140%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .page.page-projects.page-challenge.page__how-we-work__steps {
+        padding-bottom: 1330px;
+        .proj__challenge.block__how-we-work__steps {
+            padding-top: 35px;
+            padding-left: 31px;
+            p {
+                margin-top: 0;
+            }
+        }
+        .block-projects.proj__steps.how-we-work__steps {
+            width: 75%;
+            .how-we-work__steps__desc {
+                margin-top: 0;
+                gap: 70px;
+                &__step {
+                    &__icon {
+                        top: 2px;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 480px) {
+    .page.page-projects.page-challenge.page__how-we-work__steps {
+        padding-bottom: 1430px;
+    }
+}
+@media (max-width: 394px) {
+    .page.page-projects.page-challenge.page__how-we-work__steps {
+        padding-bottom: 1530px;
+    }
+}
+@media (max-width: 390px) {
+    .page.page-projects.page-challenge.page__how-we-work__steps {
+        padding-bottom: 1720px;
+        .proj__challenge.block__how-we-work__steps {
+            padding-top: 0;
+            padding-left: 0;
+        }
+        .block-projects.proj__steps.how-we-work__steps {
+            width: 60%;
+            .how-we-work__steps__desc {
+                &__step {
+                    &__icon {
+                        &.vertical-line {
+                            &::before {
+                                height: 370px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 360px) {
+    .page.page-projects.page-challenge.page__how-we-work__steps {
+        padding-bottom: 1800px;
+        .block-projects.proj__steps.how-we-work__steps {
+            .how-we-work__steps__desc {
+                &__step {
+                    &__icon {
+                        &.vertical-line {
+                            &::before {
+                                height: 400px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 345px) {
+    .page.page-projects.page-challenge.page__how-we-work__steps {
+        padding-bottom: 1900px;
+        .block-projects.proj__steps.how-we-work__steps {
+            width: 65%;
+
+            .how-we-work__steps__desc {
+                &__step {
+                    &__icon {
+                        &.vertical-line {
+                            &::before {
+                                height: 425px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 300px) {
+    .page.page-projects.page-challenge.page__how-we-work__steps {
+        padding-bottom: 2200px;
+        .block-projects.proj__steps.how-we-work__steps {
+            width: 60%;
+
+            .how-we-work__steps__desc {
+                &__step {
+                    &__icon {
+                        &.vertical-line {
+                            &::before {
+                                height: 525px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

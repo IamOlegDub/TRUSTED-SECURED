@@ -6,6 +6,7 @@ $x: 0;
 $y: 80px;
 $contact-anim-dur: 4s;
 $services-anim-dur: 1.8s;
+$services-anim-dur: 0.5s;
 
 @mixin fadeInUp($delay: $delay, $x: $x, $y: $y) {
     opacity: 0;
@@ -51,11 +52,19 @@ $services-anim-dur: 1.8s;
         @include fadeInUp();
     }
 
-    ._third._anim-items {
+    .test3,
+    .test4,
+    .test5,
+    .test6,
+    .test7,
+    .test8 {
         opacity: 0;
         visibility: hidden;
         transform: translate(0, 100%);
-        &._active {
+    }
+
+    .animate-block._third._anim-items._active {
+        .test3 {
             animation-name: list1;
             position: relative;
             transition: all 0.8s ease-out 1ms;
@@ -65,259 +74,334 @@ $services-anim-dur: 1.8s;
             animation-iteration-count: 1;
             animation-fill-mode: forwards;
         }
-    }
+        @keyframes list1 {
+            0% {
+                opacity: 0;
+                visibility: hidden;
+            }
 
-    @keyframes list1 {
-        0% {
-            opacity: 0;
-            visibility: hidden;
+            100% {
+                opacity: 1;
+                visibility: visible;
+                transform: translate(0, 0);
+            }
         }
-        15% {
-            opacity: 1;
-            visibility: visible;
-            transform: translate(0, 0);
-        }
-        100% {
-            opacity: 1;
-            visibility: visible;
-            transform: translate(0, 0);
-        }
-    }
-    ._fourth._anim-items {
-        opacity: 0;
-        visibility: hidden;
-        transform: translate(0, 100%);
-        &._active {
-            animation-name: list2;
+        .test4 {
+            animation-name: list1;
             position: relative;
             transition: all 0.8s ease-out 1ms;
             animation-duration: $services-anim-dur;
             animation-timing-function: ease-out;
-            animation-delay: 1ms;
+            animation-delay: 100ms;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        .test5 {
+            animation-name: list1;
+            position: relative;
+            transition: all 0.8s ease-out 1ms;
+            animation-duration: $services-anim-dur;
+            animation-timing-function: ease-out;
+            animation-delay: 200ms;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        .test6 {
+            animation-name: list1;
+            position: relative;
+            transition: all 0.8s ease-out 1ms;
+            animation-duration: $services-anim-dur;
+            animation-timing-function: ease-out;
+            animation-delay: 300ms;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        .test7 {
+            animation-name: list1;
+            position: relative;
+            transition: all 0.8s ease-out 1ms;
+            animation-duration: $services-anim-dur;
+            animation-timing-function: ease-out;
+            animation-delay: 400ms;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        .test8 {
+            animation-name: list1;
+            position: relative;
+            transition: all 0.8s ease-out 1ms;
+            animation-duration: $services-anim-dur;
+            animation-timing-function: ease-out;
+            animation-delay: 500ms;
             animation-iteration-count: 1;
             animation-fill-mode: forwards;
         }
     }
 
-    @keyframes list2 {
-        0% {
-            opacity: 0;
-            visibility: hidden;
-        }
-        15% {
-            opacity: 0;
-            visibility: hidden;
-        }
-        30% {
-            opacity: 1;
-            visibility: visible;
-            transform: translate(0, 0);
-        }
-        100% {
-            opacity: 1;
-            visibility: visible;
-            transform: translate(0, 0);
-        }
-    }
-    ._fifth._anim-items {
-        opacity: 0;
-        visibility: hidden;
-        transform: translate(0, 100%);
-        &._active {
-            animation-name: list3;
-            position: relative;
-            transition: all 0.8s ease-out 1ms;
-            animation-duration: $services-anim-dur;
-            animation-timing-function: ease-out;
-            animation-delay: 1ms;
-            animation-iteration-count: 1;
-            animation-fill-mode: forwards;
-        }
-    }
+    // ._third._anim-items {
+    //     opacity: 0;
+    //     visibility: hidden;
+    //     transform: translate(0, 100%);
+    //     &._active {
+    //         animation-name: list1;
+    //         position: relative;
+    //         transition: all 0.8s ease-out 1ms;
+    //         animation-duration: $services-anim-dur;
+    //         animation-timing-function: ease-out;
+    //         animation-delay: 1ms;
+    //         animation-iteration-count: 1;
+    //         animation-fill-mode: forwards;
+    //     }
+    // }
 
-    @keyframes list3 {
-        0% {
-            opacity: 0;
-            visibility: hidden;
-        }
-        15% {
-            opacity: 0;
-            visibility: hidden;
-        }
-        30% {
-            opacity: 0;
-            visibility: hidden;
-        }
-        45% {
-            opacity: 1;
-            visibility: visible;
-            transform: translate(0, 0);
-        }
-        100% {
-            opacity: 1;
-            visibility: visible;
-            transform: translate(0, 0);
-        }
-    }
-    ._sixth._anim-items {
-        opacity: 0;
-        visibility: hidden;
-        transform: translate(0, 100%);
-        &._active {
-            animation-name: list4;
-            position: relative;
-            transition: all 0.8s ease-out 1ms;
-            animation-duration: $services-anim-dur;
-            animation-timing-function: ease-out;
-            animation-delay: 1ms;
-            animation-iteration-count: 1;
-            animation-fill-mode: forwards;
-        }
-    }
+    // @keyframes list1 {
+    //     0% {
+    //         opacity: 0;
+    //         visibility: hidden;
+    //     }
+    //
+    //     100% {
+    //         opacity: 1;
+    //         visibility: visible;
+    //         transform: translate(0, 0);
+    //     }
+    // }
+    // ._fourth._anim-items {
+    //     opacity: 0;
+    //     visibility: hidden;
+    //     transform: translate(0, 100%);
+    //     &._active {
+    //         animation-name: list2;
+    //         position: relative;
+    //         transition: all 0.8s ease-out 1ms;
+    //         animation-duration: $services-anim-dur;
+    //         animation-timing-function: ease-out;
+    //         animation-delay: 1ms;
+    //         animation-iteration-count: 1;
+    //         animation-fill-mode: forwards;
+    //     }
+    // }
 
-    @keyframes list4 {
-        0% {
-            opacity: 0;
-            visibility: hidden;
-        }
-        15% {
-            opacity: 0;
-            visibility: hidden;
-        }
-        30% {
-            opacity: 0;
-            visibility: hidden;
-        }
-        45% {
-            opacity: 0;
-            visibility: hidden;
-        }
-        60% {
-            opacity: 1;
-            visibility: visible;
-            transform: translate(0, 0);
-        }
-        75% {
-            opacity: 1;
-            visibility: visible;
-            transform: translate(0, 0);
-        }
-        90% {
-            opacity: 1;
-            visibility: visible;
-            transform: translate(0, 0);
-        }
-        100% {
-            opacity: 1;
-            visibility: visible;
-            transform: translate(0, 0);
-        }
-    }
-    ._seventh._anim-items {
-        opacity: 0;
-        visibility: hidden;
-        transform: translate(0, 100%);
-        &._active {
-            animation-name: list5;
-            position: relative;
-            transition: all 0.8s ease-out 1ms;
-            animation-duration: $services-anim-dur;
-            animation-timing-function: ease-out;
-            animation-delay: 1ms;
-            animation-iteration-count: 1;
-            animation-fill-mode: forwards;
-        }
-    }
+    // @keyframes list2 {
+    //     0% {
+    //         opacity: 0;
+    //         visibility: hidden;
+    //     }
+    //     15% {
+    //         opacity: 0;
+    //         visibility: hidden;
+    //     }
+    //     30% {
+    //         opacity: 1;
+    //         visibility: visible;
+    //         transform: translate(0, 0);
+    //     }
+    //     100% {
+    //         opacity: 1;
+    //         visibility: visible;
+    //         transform: translate(0, 0);
+    //     }
+    // }
+    // ._fifth._anim-items {
+    //     opacity: 0;
+    //     visibility: hidden;
+    //     transform: translate(0, 100%);
+    //     &._active {
+    //         animation-name: list3;
+    //         position: relative;
+    //         transition: all 0.8s ease-out 1ms;
+    //         animation-duration: $services-anim-dur;
+    //         animation-timing-function: ease-out;
+    //         animation-delay: 1ms;
+    //         animation-iteration-count: 1;
+    //         animation-fill-mode: forwards;
+    //     }
+    // }
 
-    @keyframes list5 {
-        0% {
-            opacity: 0;
-            visibility: hidden;
-        }
-        15% {
-            opacity: 0;
-            visibility: hidden;
-        }
-        30% {
-            opacity: 0;
-            visibility: hidden;
-        }
-        45% {
-            opacity: 0;
-            visibility: hidden;
-        }
-        60% {
-            opacity: 0;
-            visibility: hidden;
-        }
-        75% {
-            opacity: 1;
-            visibility: visible;
-            transform: translate(0, 0);
-        }
-        90% {
-            opacity: 1;
-            visibility: visible;
-            transform: translate(0, 0);
-        }
-        100% {
-            opacity: 1;
-            visibility: visible;
-            transform: translate(0, 0);
-        }
-    }
-    ._eighth._anim-items {
-        opacity: 0;
-        visibility: hidden;
-        transform: translate(0, 200%);
-        &._active {
-            animation-name: list6;
-            position: relative;
-            transition: all 0.8s ease-out 1ms;
-            animation-duration: $services-anim-dur;
-            animation-timing-function: ease-out;
-            animation-delay: 1ms;
-            animation-iteration-count: 1;
-            animation-fill-mode: forwards;
-        }
-    }
+    // @keyframes list3 {
+    //     0% {
+    //         opacity: 0;
+    //         visibility: hidden;
+    //     }
+    //     15% {
+    //         opacity: 0;
+    //         visibility: hidden;
+    //     }
+    //     30% {
+    //         opacity: 0;
+    //         visibility: hidden;
+    //     }
+    //     45% {
+    //         opacity: 1;
+    //         visibility: visible;
+    //         transform: translate(0, 0);
+    //     }
+    //     100% {
+    //         opacity: 1;
+    //         visibility: visible;
+    //         transform: translate(0, 0);
+    //     }
+    // }
+    // ._sixth._anim-items {
+    //     opacity: 0;
+    //     visibility: hidden;
+    //     transform: translate(0, 100%);
+    //     &._active {
+    //         animation-name: list4;
+    //         position: relative;
+    //         transition: all 0.8s ease-out 1ms;
+    //         animation-duration: $services-anim-dur;
+    //         animation-timing-function: ease-out;
+    //         animation-delay: 1ms;
+    //         animation-iteration-count: 1;
+    //         animation-fill-mode: forwards;
+    //     }
+    // }
 
-    @keyframes list6 {
-        0% {
-            opacity: 0;
-            visibility: hidden;
-        }
-        15% {
-            opacity: 0;
-            visibility: hidden;
-        }
-        30% {
-            opacity: 0;
-            visibility: hidden;
-        }
-        45% {
-            opacity: 0;
-            visibility: hidden;
-        }
-        60% {
-            opacity: 0;
-            visibility: hidden;
-        }
-        75% {
-            opacity: 0;
-            visibility: hidden;
-        }
-        90% {
-            opacity: 1;
-            visibility: visible;
-            transform: translate(0, 0);
-        }
-        100% {
-            opacity: 1;
-            visibility: visible;
-            transform: translate(0, 0);
-        }
-    }
+    // @keyframes list4 {
+    //     0% {
+    //         opacity: 0;
+    //         visibility: hidden;
+    //     }
+    //     15% {
+    //         opacity: 0;
+    //         visibility: hidden;
+    //     }
+    //     30% {
+    //         opacity: 0;
+    //         visibility: hidden;
+    //     }
+    //     45% {
+    //         opacity: 0;
+    //         visibility: hidden;
+    //     }
+    //     60% {
+    //         opacity: 1;
+    //         visibility: visible;
+    //         transform: translate(0, 0);
+    //     }
+    //     75% {
+    //         opacity: 1;
+    //         visibility: visible;
+    //         transform: translate(0, 0);
+    //     }
+    //     90% {
+    //         opacity: 1;
+    //         visibility: visible;
+    //         transform: translate(0, 0);
+    //     }
+    //     100% {
+    //         opacity: 1;
+    //         visibility: visible;
+    //         transform: translate(0, 0);
+    //     }
+    // }
+    // ._seventh._anim-items {
+    //     opacity: 0;
+    //     visibility: hidden;
+    //     transform: translate(0, 100%);
+    //     &._active {
+    //         animation-name: list5;
+    //         position: relative;
+    //         transition: all 0.8s ease-out 1ms;
+    //         animation-duration: $services-anim-dur;
+    //         animation-timing-function: ease-out;
+    //         animation-delay: 1ms;
+    //         animation-iteration-count: 1;
+    //         animation-fill-mode: forwards;
+    //     }
+    // }
+
+    // @keyframes list5 {
+    //     0% {
+    //         opacity: 0;
+    //         visibility: hidden;
+    //     }
+    //     15% {
+    //         opacity: 0;
+    //         visibility: hidden;
+    //     }
+    //     30% {
+    //         opacity: 0;
+    //         visibility: hidden;
+    //     }
+    //     45% {
+    //         opacity: 0;
+    //         visibility: hidden;
+    //     }
+    //     60% {
+    //         opacity: 0;
+    //         visibility: hidden;
+    //     }
+    //     75% {
+    //         opacity: 1;
+    //         visibility: visible;
+    //         transform: translate(0, 0);
+    //     }
+    //     90% {
+    //         opacity: 1;
+    //         visibility: visible;
+    //         transform: translate(0, 0);
+    //     }
+    //     100% {
+    //         opacity: 1;
+    //         visibility: visible;
+    //         transform: translate(0, 0);
+    //     }
+    // }
+    // ._eighth._anim-items {
+    //     opacity: 0;
+    //     visibility: hidden;
+    //     transform: translate(0, 200%);
+    //     &._active {
+    //         animation-name: list6;
+    //         position: relative;
+    //         transition: all 0.8s ease-out 1ms;
+    //         animation-duration: $services-anim-dur;
+    //         animation-timing-function: ease-out;
+    //         animation-delay: 1ms;
+    //         animation-iteration-count: 1;
+    //         animation-fill-mode: forwards;
+    //     }
+    // }
+
+    // @keyframes list6 {
+    //     0% {
+    //         opacity: 0;
+    //         visibility: hidden;
+    //     }
+    //     15% {
+    //         opacity: 0;
+    //         visibility: hidden;
+    //     }
+    //     30% {
+    //         opacity: 0;
+    //         visibility: hidden;
+    //     }
+    //     45% {
+    //         opacity: 0;
+    //         visibility: hidden;
+    //     }
+    //     60% {
+    //         opacity: 0;
+    //         visibility: hidden;
+    //     }
+    //     75% {
+    //         opacity: 1;
+    //         visibility: visible;
+    //         transform: translate(0, 0);
+    //     }
+    //     90% {
+    //         opacity: 1;
+    //         visibility: visible;
+    //         transform: translate(0, 0);
+    //     }
+    //     100% {
+    //         opacity: 1;
+    //         visibility: visible;
+    //         transform: translate(0, 0);
+    //     }
+    // }
 
     // ._third._anim-items {
     //     @include fadeInUp();

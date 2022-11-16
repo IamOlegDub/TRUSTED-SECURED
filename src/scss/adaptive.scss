@@ -27,7 +27,7 @@
 }
 @media (max-width: 1110px) and (min-width: 601px) {
     h2 {
-        font-size: 48px !important;
+        font-size: 48px;
     }
     .header {
         height: 56px;
@@ -132,6 +132,42 @@
         .slick-dots
         .slick-active::after {
         content: "/6";
+    }
+    .slick-arrow {
+        &:hover {
+            -webkit-user-select: none;
+            -webkit-touch-callout: none;
+        }
+        &:active {
+            background: linear-gradient(90deg, #f72f16 0%, #9422d1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    .slick-arrow.slick-prev {
+        &:hover::before {
+            content: url("/img/keyboard_arrow_left.svg");
+        }
+        &::before {
+            content: url("/img/keyboard_arrow_left.svg");
+            margin-right: 16px;
+        }
+        &:active::before {
+            content: url("/img/keyboard_arrow_left_hover.svg");
+        }
+    }
+    .slick-arrow.slick-next {
+        right: 2px;
+        &:hover::after {
+            content: url("/img/keyboard_arrow_right.svg");
+        }
+        &::after {
+            content: url("/img/keyboard_arrow_right.svg");
+            margin-left: 16px;
+        }
+        &:active::after {
+            content: url("/img/keyboard_arrow_right_hover.svg");
+        }
     }
 }
 @media (max-width: 850px) and (min-width: 601px) {

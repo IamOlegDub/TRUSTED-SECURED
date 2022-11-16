@@ -271,6 +271,390 @@ $background: #f5f5f5;
         }
     }
 }
+@mixin slider-our-team {
+    .our-team__slider {
+        position: relative;
+        padding-top: 106px;
+        h3 {
+            font-size: 40px;
+            line-height: 120%;
+            letter-spacing: 0.015em;
+            text-transform: uppercase;
+            color: $black;
+            margin-bottom: 26px;
+        }
+        span {
+            font-size: 18px;
+            line-height: 140%;
+            text-transform: uppercase;
+            color: $black;
+        }
+        p {
+            font-size: 18px;
+            line-height: 140%;
+            color: $black;
+        }
+
+        .slick-track {
+            display: flex;
+        }
+        .slick-list {
+            overflow: hidden;
+        }
+        .slick-arrow {
+            position: absolute;
+            top: 22px;
+            z-index: 10;
+            font-size: 18px;
+            line-height: 140%;
+            text-transform: uppercase;
+            color: $black;
+            border: none;
+            background-color: transparent;
+            @include button-gradient-hover;
+        }
+        .slick-arrow.slick-prev {
+            right: 195px;
+            &::before {
+                content: url("/img/keyboard_arrow_left.svg");
+                margin-right: 16px;
+            }
+            &:hover::before {
+                content: url("/img/keyboard_arrow_left_hover.svg");
+            }
+        }
+
+        .slick-arrow.slick-next {
+            right: 2px;
+            &::after {
+                content: url("/img/keyboard_arrow_right.svg");
+                margin-left: 16px;
+            }
+            &:hover::after {
+                content: url("/img/keyboard_arrow_right_hover.svg");
+            }
+        }
+        .slick-dots {
+            position: absolute;
+            top: 22px;
+            right: 127px;
+            display: flex;
+            top: 23px;
+            li {
+                display: none;
+            }
+            .slick-active {
+                color: $black;
+                display: block;
+                button {
+                    z-index: 10;
+                    font-size: 18px;
+                    line-height: 140%;
+                    text-transform: uppercase;
+                    color: $black;
+
+                    border: none;
+                    background-color: transparent;
+                    padding: 0;
+                }
+                &::after {
+                    content: "/2";
+                    font-size: 18px;
+                    line-height: 140%;
+                    color: rgba(13, 13, 13, 0.4);
+                }
+            }
+        }
+    }
+}
+@mixin slider-our-team-mobile {
+    .our-team__slider-mobile {
+        position: relative;
+        padding-top: 106px;
+        h3 {
+            font-size: 40px;
+            line-height: 120%;
+            letter-spacing: 0.015em;
+            text-transform: uppercase;
+            color: $black;
+            margin-bottom: 26px;
+        }
+        span {
+            font-size: 18px;
+            line-height: 140%;
+            text-transform: uppercase;
+            color: $black;
+        }
+        p {
+            font-size: 18px;
+            line-height: 140%;
+            color: $black;
+        }
+
+        .slick-track {
+            display: flex;
+        }
+        .slick-list {
+            overflow: hidden;
+        }
+        .slick-arrow {
+            position: absolute;
+            top: 22px;
+            z-index: 10;
+            font-size: 18px;
+            line-height: 140%;
+            text-transform: uppercase;
+            color: $black;
+            border: none;
+            background-color: transparent;
+            @include button-gradient-hover;
+        }
+        .slick-arrow.slick-prev {
+            right: 195px;
+            &::before {
+                content: url("/img/keyboard_arrow_left.svg");
+                margin-right: 16px;
+            }
+            &:hover::before {
+                content: url("/img/keyboard_arrow_left_hover.svg");
+            }
+        }
+
+        .slick-arrow.slick-next {
+            right: 2px;
+            &::after {
+                content: url("/img/keyboard_arrow_right.svg");
+                margin-left: 16px;
+            }
+            &:hover::after {
+                content: url("/img/keyboard_arrow_right_hover.svg");
+            }
+        }
+        .slick-dots {
+            position: absolute;
+            top: 22px;
+            right: 127px;
+            display: flex;
+            top: 23px;
+            li {
+                display: none;
+            }
+            .slick-active {
+                color: $black;
+                display: block;
+                button {
+                    z-index: 10;
+                    font-size: 18px;
+                    line-height: 140%;
+                    text-transform: uppercase;
+                    color: $black;
+
+                    border: none;
+                    background-color: transparent;
+                    padding: 0;
+                }
+                &::after {
+                    content: "/8";
+                    font-size: 18px;
+                    line-height: 140%;
+                    color: rgba(13, 13, 13, 0.4);
+                }
+            }
+        }
+    }
+}
+@mixin slider-vacancies {
+    .block-slider-vacancies {
+        position: relative;
+        padding-top: 106px;
+        h3 {
+            font-size: 40px;
+            line-height: 120%;
+            letter-spacing: 0.015em;
+            text-transform: uppercase;
+            color: $black;
+            margin-bottom: 26px;
+        }
+        span {
+            font-size: 18px;
+            line-height: 140%;
+            text-transform: uppercase;
+            color: $black;
+        }
+        p {
+            font-size: 18px;
+            line-height: 140%;
+            color: $black;
+        }
+
+        .slick-track {
+            display: flex;
+        }
+        .slick-list {
+            overflow: hidden;
+        }
+        .slick-arrow {
+            position: absolute;
+            top: 22px;
+            z-index: 10;
+            font-size: 18px;
+            line-height: 140%;
+            text-transform: uppercase;
+            color: $black;
+            border: none;
+            background-color: transparent;
+            @include button-gradient-hover;
+        }
+        .slick-arrow.slick-prev {
+            right: 195px;
+            &::before {
+                content: url("/img/keyboard_arrow_left.svg");
+                margin-right: 16px;
+            }
+            &:hover::before {
+                content: url("/img/keyboard_arrow_left_hover.svg");
+            }
+        }
+
+        .slick-arrow.slick-next {
+            right: 2px;
+            &::after {
+                content: url("/img/keyboard_arrow_right.svg");
+                margin-left: 16px;
+            }
+            &:hover::after {
+                content: url("/img/keyboard_arrow_right_hover.svg");
+            }
+        }
+        .slick-dots {
+            position: absolute;
+            top: 22px;
+            right: 127px;
+            display: flex;
+            top: 23px;
+            li {
+                display: none;
+            }
+            .slick-active {
+                color: $black;
+                display: block;
+                button {
+                    z-index: 10;
+                    font-size: 18px;
+                    line-height: 140%;
+                    text-transform: uppercase;
+                    color: $black;
+
+                    border: none;
+                    background-color: transparent;
+                    padding: 0;
+                }
+                &::after {
+                    content: "/3";
+                    font-size: 18px;
+                    line-height: 140%;
+                    color: rgba(13, 13, 13, 0.4);
+                }
+            }
+        }
+    }
+}
+@mixin slider-vacancies-mobile {
+    .block-slider-vacancies-mobile {
+        position: relative;
+        padding-top: 106px;
+        h3 {
+            font-size: 40px;
+            line-height: 120%;
+            letter-spacing: 0.015em;
+            text-transform: uppercase;
+            color: $black;
+            margin-bottom: 26px;
+        }
+        span {
+            font-size: 18px;
+            line-height: 140%;
+            text-transform: uppercase;
+            color: $black;
+        }
+        p {
+            font-size: 18px;
+            line-height: 140%;
+            color: $black;
+        }
+
+        .slick-track {
+            display: flex;
+        }
+        .slick-list {
+            overflow: hidden;
+        }
+        .slick-arrow {
+            position: absolute;
+            top: 22px;
+            z-index: 10;
+            font-size: 18px;
+            line-height: 140%;
+            text-transform: uppercase;
+            color: $black;
+            border: none;
+            background-color: transparent;
+            @include button-gradient-hover;
+        }
+        .slick-arrow.slick-prev {
+            right: 195px;
+            &::before {
+                content: url("/img/keyboard_arrow_left.svg");
+                margin-right: 16px;
+            }
+            &:hover::before {
+                content: url("/img/keyboard_arrow_left_hover.svg");
+            }
+        }
+
+        .slick-arrow.slick-next {
+            right: 2px;
+            &::after {
+                content: url("/img/keyboard_arrow_right.svg");
+                margin-left: 16px;
+            }
+            &:hover::after {
+                content: url("/img/keyboard_arrow_right_hover.svg");
+            }
+        }
+        .slick-dots {
+            position: absolute;
+            top: 22px;
+            right: 127px;
+            display: flex;
+            top: 23px;
+            li {
+                display: none;
+            }
+            .slick-active {
+                color: $black;
+                display: block;
+                button {
+                    z-index: 10;
+                    font-size: 18px;
+                    line-height: 140%;
+                    text-transform: uppercase;
+                    color: $black;
+
+                    border: none;
+                    background-color: transparent;
+                    padding: 0;
+                }
+                &::after {
+                    content: "/6";
+                    font-size: 18px;
+                    line-height: 140%;
+                    color: rgba(13, 13, 13, 0.4);
+                }
+            }
+        }
+    }
+}
 @mixin slider__center-mode {
     .block-slider__center-mode {
         position: relative;
