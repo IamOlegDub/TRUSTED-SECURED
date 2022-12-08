@@ -13,10 +13,10 @@
             <div class="header__nav__left">
                 <ul>
                     <li class="header__nav__list-item" id="link-to-services">
-                        <span>Services</span>
+                        <a href="/#services"><span>Services</span></a>
                     </li>
                     <li class="header__nav__list-item" id="link-to-projects">
-                        <span>Projects</span>
+                        <a href="/project-list.html"><span>Projects</span></a>
                     </li>
                     <li
                         class="burger__open header__nav__list-item desktop__open"
@@ -24,13 +24,21 @@
                         <ul class="desktop__open__list">
                             <li></li>
                             <!-- <li><span>company</span></li> -->
-                            <li id="link-to-our-team"><span>our team</span></li>
+                            <li id="link-to-our-team">
+                                <a href="/our-team.html"
+                                    ><span>our team</span></a
+                                >
+                            </li>
                             <li id="link-to-how-we-work">
-                                <span>How We Work</span>
+                                <a href="/how-we-work.html"
+                                    ><span>How We Work</span></a
+                                >
                             </li>
 
                             <li id="link-to-vacancies">
-                                <span>Vacancies</span>
+                                <a href="/vacancies.html"
+                                    ><span>Vacancies</span></a
+                                >
                             </li>
                         </ul>
                         <span
@@ -51,17 +59,17 @@
 
                         <ul class="burger__open__list">
                             <li id="burger-link-to-our-team" class="drop-list">
-                                our team
+                                <a href="/our-team.html">our team</a>
                             </li>
                             <li
                                 id="burger-link-to-how-we-work"
                                 class="drop-list"
                             >
-                                how we work
+                                <a href="/how-we-work.html">how we work</a>
                             </li>
 
                             <li id="burger-link-to-vacancies" class="drop-list">
-                                vacancies
+                                <a href="/vacancies.html">vacancies</a>
                             </li>
                         </ul>
                     </li>
@@ -81,13 +89,15 @@
                         class="header__nav__right__contacts header__nav__list-item"
                         id="link-to-contacts"
                     >
-                        <span>Contact&nbspus</span>
+                        <a href="/contact-us.html"
+                            ><span>Contact&nbspus</span></a
+                        >
                     </li>
-                    <li>
+                    <!-- <li>
                         <div class="language-select">
                             <div class="language-option active" data-lang="en">
-                                <span>en</span>
-                                <!-- <span>
+                                <span>en</span> -->
+                    <!-- <span>
                                     <img
                                         class="language-arrow__down"
                                         src="@img/keyboard_arrow_down.svg"
@@ -104,8 +114,8 @@
                                         alt=""
                                     />
                                 </span> -->
-                            </div>
-                            <!-- <div class="language-option" data-lang="ua">
+                    <!-- </div> -->
+                    <!-- <div class="language-option" data-lang="ua">
                                 <span>ua</span>
                                 <span>
                                     <img
@@ -125,8 +135,8 @@
                                     />
                                 </span>
                             </div> -->
-                        </div>
-                    </li>
+                    <!-- </div>
+                    </li> -->
                     <li class="burger-support">
                         <a
                             class="show_popup support-button__burger"

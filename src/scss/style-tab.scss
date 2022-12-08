@@ -209,6 +209,9 @@
                 li {
                     color: $ph;
                     padding: 10px 80px;
+                    a {
+                        color: $ph;
+                    }
                 }
                 &.list-open {
                     display: block;
@@ -563,7 +566,7 @@
                 .slick-active {
                     display: block;
                     &::after {
-                        content: "/2";
+                        content: "/3";
                         font-size: 18px;
                         line-height: 140%;
                         color: rgba(13, 13, 13, 0.4);
@@ -909,7 +912,7 @@
                     .block-tech__slider__cards__card__img {
                         width: 328px;
                         &::after {
-                            width: 318px !important;
+                            width: 318px;
                         }
                     }
                     .block-tech__slider__cards__card__desc {
@@ -945,7 +948,7 @@
                     .block-tech__slider__cards__card__img {
                         width: 350px;
                         &::after {
-                            width: 340px !important;
+                            width: 340px;
                         }
                     }
                     .block-tech__slider__cards__card__desc {

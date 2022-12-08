@@ -6,12 +6,26 @@ $(document).ready(function () {
     // close-button cookies ===================================================
     $("#cookies-close-btn").click(function () {
         $(".banner-cookies").addClass("js-hidden");
-        localStorage.setItem("hideCookies", true);
+        // localStorage.setItem ("hideCookies", true);
     });
-    let cookiesHide = localStorage.getItem("hideCookies");
-    if (!cookiesHide) {
-        $(".banner-cookies").removeClass("js-hidden");
-    }
+    // let cookiesHide = localStorage.getItem("hideCookies");
+    // if (!cookiesHide) {
+    //     $(".banner-cookies").removeClass("js-hidden");
+    // }
+
+    addEventListener("resize", (event) => {
+        if (window.innerWidth < 416) {
+            $(".page-technologies .block-tech__slider__cards__card").css({
+                width: $(".wrap").width(),
+            });
+            $(
+                ".page-technologies .block-tech__slider__cards__card.frontend-card:hover .block-tech__slider__cards__card__img::after"
+            ).css({
+                width: $(".wrap").width() - 10,
+            });
+        }
+    });
+
     // language select ================================================================
     // $(".language-select").click(function () {
     //     $(this).toggleClass("open");
@@ -49,8 +63,8 @@ $(document).ready(function () {
     const currUrl = `${location.protocol}//${window.location.host}/`;
 
     $("#explore-company, #link-to-services").click(function (e) {
+        e.preventDefault();
         if ($(location)[0].href === currUrl) {
-            e.preventDefault();
             $("html, body").animate(
                 {
                     scrollTop: $("#services").offset().top - 72,
@@ -58,7 +72,6 @@ $(document).ready(function () {
                 1000
             );
         } else {
-            e.preventDefault();
             $(location).attr("href", "/#services");
         }
         $(".header__burger, .header__nav, .burger-menu_overlay").removeClass(
@@ -86,8 +99,8 @@ $(document).ready(function () {
     // });
 
     $("#get-in-touch, #start-project").click(function (e) {
+        e.preventDefault();
         if ($(location)[0].href === currUrl) {
-            e.preventDefault();
             $("html, body").animate(
                 {
                     scrollTop: $("#contacts").offset().top - 72,
@@ -95,7 +108,6 @@ $(document).ready(function () {
                 1000
             );
         } else {
-            e.preventDefault();
             $(location).attr("href", "/#contacts");
         }
         $(".header__burger, .header__nav, .burger-menu_overlay").removeClass(
@@ -151,6 +163,18 @@ $(document).ready(function () {
             $(location).attr("href", "/vacancies-one.html");
         }
     );
+    $("#link-to-vacancies-two, .slider-desk-link-to-vacancies-two").click(
+        function (e) {
+            e.preventDefault();
+            $(location).attr("href", "/vacancies-two.html");
+        }
+    );
+    $("#link-to-vacancies-three, .slider-desk-link-to-vacancies-three").click(
+        function (e) {
+            e.preventDefault();
+            $(location).attr("href", "/vacancies-three.html");
+        }
+    );
     $("#link-to-vacancies-slider").click(function (e) {
         if ($(location)[0].href === "http://localhost:3000/vacancies.html") {
             e.preventDefault();
@@ -175,8 +199,6 @@ $(document).ready(function () {
         e.preventDefault();
         $(location).attr("href", "/our-team.html");
     });
-
-    history.pushState("", document.title, window.location.pathname);
 
     // about us list =============================================================
     $(".burger__open__toggler").click(function (e) {
@@ -317,7 +339,8 @@ $(document).ready(function () {
         slidesToScroll: 2,
     });
 
-    $(".footer__column__list__link-to, .services-link").click(function () {
+    $(".footer__column__list__link-to, .services-link").click(function (e) {
+        e.preventDefault();
         let linkName = $(this)[0]
             .outerText.split(" ")
             .join("")
@@ -342,6 +365,7 @@ $(document).ready(function () {
             $(`.${linkName}`).addClass("active");
 
             $(`#block-services__auto-slider__${linkName}`).addClass("active");
+
             if (window.innerWidth > 850) {
                 $("html, body").animate(
                     {
@@ -474,6 +498,8 @@ $(document).ready(function () {
             );
         }
     });
+
+    history.pushState("", document.title, window.location.pathname);
 
     // auto-slider ==============================================================
 
@@ -847,7 +873,6 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(formCV.files[0]);
         uploadFile(formCV.files[0]);
     });
-
     function uploadFile(file) {
         if (
             ![
@@ -893,6 +918,9 @@ document.addEventListener("DOMContentLoaded", function () {
         let error = formValidate(form);
 
         let formData = new FormData(form);
+        if (!formCV.files[0]) {
+            return;
+        }
         if (formCV.files[0]) {
             formData.append("application", formCV.files[0]);
         }
